@@ -1,0 +1,350 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Binova Interio - Contact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "gallery-white": "#FFFFFF",
+                      "on-surface-variant": "#4c4546",
+                      "on-tertiary-fixed": "#1b1b1b",
+                      "surface-dim": "#dadada",
+                      "surface-container": "#eeeeee",
+                      "monolith-black": "#000000",
+                      "surface-variant": "#e2e2e2",
+                      "on-tertiary-container": "#848484",
+                      "on-background": "#1a1c1c",
+                      "concrete-light": "#F2F2F2",
+                      "tertiary-fixed-dim": "#c6c6c6",
+                      "muted-sage": "#718466",
+                      "on-primary-container": "#848484",
+                      "primary-fixed": "#e2e2e2",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-surface": "#1a1c1c",
+                      "primary-container": "#1b1b1b",
+                      "obsidian-gray": "#1A1A1A",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-primary-fixed": "#1b1b1b",
+                      "primary": "#000000",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#cfc4c5",
+                      "on-tertiary-fixed-variant": "#474747",
+                      "inverse-on-surface": "#f0f1f1",
+                      "surface-container-low": "#f3f3f4",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "tertiary": "#000000",
+                      "outline": "#7e7576",
+                      "surface": "#f9f9f9",
+                      "background": "#f9f9f9",
+                      "on-error": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#2f3131",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "inverse-primary": "#c6c6c6",
+                      "tertiary-container": "#1b1b1b",
+                      "on-secondary": "#ffffff",
+                      "surface-tint": "#5e5e5e",
+                      "secondary-container": "#e2dfde",
+                      "secondary": "#5f5e5e",
+                      "on-primary-fixed-variant": "#474747",
+                      "on-secondary-container": "#636262",
+                      "surface-container-high": "#e8e8e8",
+                      "on-secondary-fixed-variant": "#474746",
+                      "secondary-fixed": "#e5e2e1",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "surface-bright": "#f9f9f9"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "section-gap-mobile": "80px",
+                      "unit": "8px",
+                      "margin-tablet": "48px",
+                      "gutter": "24px",
+                      "margin-mobile": "24px",
+                      "section-gap-desktop": "160px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-xs": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-sm": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-xl": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "34px",
+                              {
+                                      "lineHeight": "42px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "label-xs": [
+                              "10px",
+                              {
+                                      "lineHeight": "12px",
+                                      "letterSpacing": "0.2em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "11px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "80px",
+                              {
+                                      "lineHeight": "90px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "200"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        
+        .input-line {
+            border: none;
+            border-bottom: 1px solid #1A1A1A;
+            border-radius: 0;
+            background: transparent;
+        }
+        
+        .input-line:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: #000000;
+        }
+        
+        /* Drawer transitions */
+        .drawer-overlay {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 1s ease;
+        }
+        .drawer-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+      </style>
+</head>
+<body class="font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-gallery-white/80 dark:bg-monolith-black/80 backdrop-blur-md border-b border-obsidian-gray/10 flex justify-between items-center px-margin-mobile h-16 transition-transform duration-300">
+<button class="text-primary dark:text-on-primary hover:opacity-70 transition-opacity duration-500 flex items-center justify-center w-12 h-12 -ml-3" id="menu-btn">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<span class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-on-primary absolute left-1/2 -translate-x-1/2">BINOVA INTERIO</span>
+<div class="w-12"></div> <!-- Spacer for center alignment -->
+</header>
+<!-- NavigationDrawer -->
+<div class="drawer-overlay fixed inset-0 z-[60] w-screen h-screen bg-gallery-white dark:bg-monolith-black" id="drawer">
+<div class="flex justify-between items-center px-margin-mobile h-16 w-full border-b border-obsidian-gray/10">
+<button class="text-primary dark:text-on-primary hover:opacity-70 transition-opacity duration-500 flex items-center justify-center w-12 h-12 -ml-3" id="close-btn">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">close</span>
+</button>
+<span class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-on-primary absolute left-1/2 -translate-x-1/2">BINOVA INTERIO</span>
+<div class="w-12"></div>
+</div>
+<div class="flex flex-col justify-center items-start px-margin-mobile gap-8 h-[calc(100vh-64px)] overflow-y-auto">
+<span class="font-label-sm text-label-sm text-primary dark:text-on-primary mb-4 tracking-[0.2em]">COLLECTIONS</span>
+<a class="group flex items-center gap-4 text-secondary dark:text-secondary-fixed opacity-40 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 0;">countertops</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile">Kitchen</span>
+</a>
+<a class="group flex items-center gap-4 text-secondary dark:text-secondary-fixed opacity-40 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 0;">weekend</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile">Living</span>
+</a>
+<a class="group flex items-center gap-4 text-secondary dark:text-secondary-fixed opacity-40 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 0;">bathtub</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile">Bath</span>
+</a>
+<a class="group flex items-center gap-4 text-secondary dark:text-secondary-fixed opacity-40 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 0;">architecture</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile">Projects</span>
+</a>
+<a class="group flex items-center gap-4 text-secondary dark:text-secondary-fixed opacity-40 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 0;">auto_stories</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile">Our Narrative</span>
+</a>
+</div>
+</div>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 px-margin-mobile pb-section-gap-mobile flex flex-col gap-16">
+<!-- Header Section -->
+<section class="flex flex-col gap-4">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-monolith-black font-light tracking-tight leading-tight">
+                Connect with our studio.
+            </h1>
+<p class="font-body-lg text-body-lg text-secondary">
+                For inquiries, collaborations, or to arrange a private viewing of our collections.
+            </p>
+</section>
+<!-- Studio Details Section -->
+<section class="flex flex-col gap-8">
+<div class="border-b border-surface-variant pb-8 flex flex-col gap-6">
+<h2 class="font-label-sm text-label-sm tracking-[0.15em] text-monolith-black uppercase">Bengaluru Studio</h2>
+<div class="flex flex-col gap-4">
+<p class="font-body-lg text-body-lg text-monolith-black"># 108, Basement Suvirath Mansion, Lalbagh Fort Road, Bengaluru-560 004</p>
+<a href="tel:08043726586" class="font-headline-md text-headline-md text-monolith-black hover:opacity-70 transition-opacity">080 - 4372 6586</a>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-label-xs text-label-xs tracking-[0.2em] text-secondary uppercase">Email</h3>
+<a class="font-body-lg text-body-lg text-monolith-black hover:opacity-70 transition-opacity" href="mailto:info@binovainterio.com">info@binovainterio.com</a>
+</div>
+</section>
+<!-- Inquiry Form -->
+<section class="flex flex-col gap-8 pt-8 border-t border-surface-variant">
+<h2 class="font-label-sm text-label-sm tracking-[0.15em] text-monolith-black uppercase">Direct Inquiry</h2>
+<form class="flex flex-col gap-6">
+<div class="flex flex-col">
+<label class="sr-only" for="name">Name</label>
+<input class="input-line py-3 px-0 w-full text-monolith-black font-body-lg placeholder:text-surface-tint/50 focus:ring-0" id="name" placeholder="Name" type="text">
+</div>
+<div class="flex flex-col">
+<label class="sr-only" for="email">Email</label>
+<input class="input-line py-3 px-0 w-full text-monolith-black font-body-lg placeholder:text-surface-tint/50 focus:ring-0" id="email" placeholder="Email Address" type="email">
+</div>
+<div class="flex flex-col">
+<label class="sr-only" for="message">Message</label>
+<textarea class="input-line py-3 px-0 w-full text-monolith-black font-body-lg placeholder:text-surface-tint/50 focus:ring-0 resize-none" id="message" placeholder="Message" rows="3"></textarea>
+</div>
+<button class="mt-4 bg-monolith-black text-gallery-white font-label-sm text-label-sm tracking-[0.15em] uppercase h-12 px-8 w-full hover:bg-obsidian-gray transition-colors duration-300" type="submit">
+                    Send Message
+                </button>
+</form>
+</section>
+<!-- Location Map Placeholder -->
+<section class="flex flex-col gap-4 w-full pt-8">
+<h2 class="font-label-sm text-label-sm tracking-[0.15em] text-monolith-black uppercase">Location</h2>
+<div class="w-full h-64 bg-surface-container flex items-center justify-center relative overflow-hidden group border border-surface-variant">
+<!-- Using a styled placeholder for the map to fit the quiet luxury aesthetic -->
+<div class="absolute inset-0 bg-concrete-light opacity-50 z-0"></div>
+<div class="z-10 flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-monolith-black" style="font-variation-settings: 'FILL' 0;">location_on</span>
+<span class="font-label-xs text-label-xs tracking-[0.2em] text-monolith-black uppercase">Bengaluru, India</span>
+</div>
+<!-- Subtle grid pattern to suggest a map -->
+<div class="absolute inset-0 z-0" style="background-image: linear-gradient(to right, #e2e2e2 1px, transparent 1px), linear-gradient(to bottom, #e2e2e2 1px, transparent 1px); background-size: 20px 20px; opacity: 0.3;"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-obsidian-gray dark:bg-monolith-black flex flex-col px-margin-mobile py-section-gap-mobile gap-gutter border-t border-on-tertiary-fixed-variant">
+<span class="font-headline-md text-headline-md text-gallery-white mb-4">BINOVA INTERIO</span>
+<div class="grid grid-cols-2 gap-y-6 gap-x-4 mb-8">
+<a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Instagram</a>
+<a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Address</a>
+<a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">LinkedIn</a>
+<a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Phone</a>
+<a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Pinterest</a>
+<a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Email</a>
+</div>
+<div class="pt-8 border-t border-surface-tint/30">
+<p class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim">© 2024 Binova Interio. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Drawer toggle logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const drawer = document.getElementById('drawer');
+            
+            if(menuBtn && drawer && closeBtn) {
+                menuBtn.addEventListener('click', () => {
+                    drawer.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+                
+                closeBtn.addEventListener('click', () => {
+                    drawer.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+        });
+    </script>
+
+
+</body></html>

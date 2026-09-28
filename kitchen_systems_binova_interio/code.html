@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Binova Interio - Kitchen Systems</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#474747",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "concrete-light": "#F2F2F2",
+                        "obsidian-gray": "#1A1A1A",
+                        "on-surface-variant": "#4c4546",
+                        "surface": "#f9f9f9",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "inverse-surface": "#303030",
+                        "secondary-container": "#d1e6c3",
+                        "outline-variant": "#cfc4c5",
+                        "on-background": "#1b1b1b",
+                        "tertiary-container": "#1b1b1b",
+                        "secondary-fixed": "#d4e9c6",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f3f3",
+                        "primary-container": "#1b1b1b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#101f09",
+                        "on-tertiary-container": "#848484",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#848484",
+                        "surface-tint": "#5e5e5e",
+                        "on-secondary-container": "#56684c",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed": "#e2e2e2",
+                        "monolith-black": "#000000",
+                        "secondary-fixed-dim": "#b8cdab",
+                        "background": "#f9f9f9",
+                        "outline": "#7e7576",
+                        "on-surface": "#1b1b1b",
+                        "secondary": "#516448",
+                        "on-secondary-fixed-variant": "#3a4c32",
+                        "surface-bright": "#f9f9f9",
+                        "primary": "#000000",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "inverse-primary": "#c6c6c6",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "gallery-white": "#FFFFFF",
+                        "tertiary": "#000000",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dadada",
+                        "muted-sage": "#718466"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        unit: "8px",
+                        "margin-mobile": "24px",
+                        "margin-desktop": "80px",
+                        gutter: "32px",
+                        "section-gap": "160px"
+                    },
+                    fontFamily: {
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "display-xl": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.1em", fontWeight: "600" }],
+                        "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "0.05em", fontWeight: "400" }],
+                        "headline-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "300" }],
+                        "display-xl": ["80px", { lineHeight: "90px", letterSpacing: "-0.04em", fontWeight: "200" }],
+                        "body-lg": ["18px", { lineHeight: "32px", fontWeight: "400" }],
+                        "headline-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "300" }],
+                        "body-md": ["16px", { lineHeight: "28px", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gallery-white text-monolith-black font-body-md selection:bg-monolith-black selection:text-gallery-white">
+<!-- TopNavBar -->
+<nav class="bg-gallery-white/90 dark:bg-obsidian-gray/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/30 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-unit mx-auto transition-opacity opacity-100 hover:opacity-80">
+<div class="font-headline-md text-headline-md tracking-tighter font-bold text-monolith-black dark:text-gallery-white">
+            Binova Interio
+        </div>
+<div class="hidden md:flex gap-gutter font-label-sm text-label-sm uppercase tracking-widest">
+<a class="text-monolith-black dark:text-gallery-white border-b border-monolith-black dark:border-gallery-white pb-1 hover:text-monolith-black dark:hover:text-gallery-white transition-colors duration-300" href="#">Kitchen</a>
+<a class="text-on-surface-variant dark:text-outline-variant pb-1 hover:text-monolith-black dark:hover:text-gallery-white transition-colors duration-300" href="#">Living</a>
+<a class="text-on-surface-variant dark:text-outline-variant pb-1 hover:text-monolith-black dark:hover:text-gallery-white transition-colors duration-300" href="#">Bath</a>
+<a class="text-on-surface-variant dark:text-outline-variant pb-1 hover:text-monolith-black dark:hover:text-gallery-white transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="md:hidden text-monolith-black">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-screen flex items-end pb-margin-desktop px-margin-mobile md:px-margin-desktop">
+<div class="absolute inset-0 z-0 bg-monolith-black">
+<div class="w-full h-full bg-cover bg-center opacity-80 mix-blend-luminosity" data-alt="A cinematic, wide-angle shot of a luxurious, high-end dark kitchen island. The island is monolithic, clad in deeply textured, almost black stone with subtle charcoal veining. The lighting is dramatic and moody, highlighting the razor-sharp edges and minimalist architectural design. The setting is a vast, open-plan space with expansive glass windows revealing a muted, twilight cityscape. The overall aesthetic is strictly minimalist, sophisticated, and pristine, utilizing a high-contrast monochromatic palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKRGMec8JQDRFAvImZSdumBtADVdiOS2xqFxcHmllGC8NlUsfzmKHl8GKG5FYTNVC9oQsbLZE7EoPQoctdbI4YxNa-e4UdVn-AEYy2BXYdoGsxtc4WCDQoyf0A9gScNq0HsoDDEmWw8nQWc1N5tt8enzs0WZJalk_BDeZUhjAFGIPQrI8Vxp4F8yueaR5_cTyebF2jaZmKk0QZLp_SITh9pajQPvmHUXsVrc5gqNxv3rqddrgttWJ5')"></div>
+</div>
+<div class="relative z-10 w-full flex flex-col md:flex-row justify-between items-end gap-gutter reveal-up">
+<div class="max-w-2xl text-gallery-white">
+<h1 class="font-display-xl text-display-xl mb-6">Architectural Kitchen Systems</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-md">Precision engineering meets material honesty. A study in uncompromising minimalism.</p>
+</div>
+<button class="group flex items-center gap-4 border border-gallery-white px-8 py-4 text-gallery-white hover:bg-gallery-white hover:text-monolith-black transition-colors duration-500">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Explore Systems</span>
+<span class="material-symbols-outlined transform group-hover:translate-x-2 transition-transform duration-500">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- The Technical Core -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-gallery-white">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="col-span-1 md:col-span-5 flex flex-col justify-center reveal-up">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-outline mb-4">01 / Engineering</h2>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-monolith-black mb-8 leading-tight">The Technical Core</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12">Beneath the pristine surfaces lies a complex infrastructure designed for absolute efficiency. Our systems utilize aerospace-grade aluminum frameworks, concealed articulation joints, and flush-integrated appliances to maintain unbroken architectural volumes.</p>
+<div class="flex flex-col gap-6 border-t border-outline-variant/30 pt-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-outline">tune</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-monolith-black">Micro-Adjustment Hardware</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-outline">layers</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-monolith-black">Monolithic Panel Systems</span>
+</div>
+</div>
+</div>
+<div class="col-span-1 md:col-span-7 mt-12 md:mt-0 reveal-up" style="transition-delay: 200ms;">
+<img alt="Kitchen details" class="w-full h-auto object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/AP1WRLs9fra824p9lly4POGANGbi7TAtym8WYYXJ3A4KhVdGc-u7ijHI-WUiYaAGprwRho0RO6jJiL2hbTW4gYPAvB0EUB7wDqYPiUk8C92D0EzlT1ILu0j3D_gNdPRN2YUnwEthcw9OByytVAH-esPQc3_nUuy5HNYXZooHw5R2OnmStUHmkbIAnhtNQYGmVs9OY5n5PZjuitZIIx0XtEcuwhpw_9K52m-TzY7sHOXAiHeTMxjxlVh1-qq8OG0"/>
+</div>
+</div>
+</section>
+<!-- Material Palette (Bento Grid) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+<div class="mb-16 reveal-up">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-outline mb-4">02 / Surfaces</h2>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-monolith-black">Material Palette</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Large Feature -->
+<div class="md:col-span-2 relative h-[600px] overflow-hidden group reveal-up">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="A macro, ultra-detailed photograph of a premium, heavily textured dark stone slab used for a high-end kitchen countertop. The stone is a deep charcoal grey with striking, organic white veining and microscopic crystalline structures reflecting harsh, directional studio light. The composition is abstract and purely focused on the raw, brutalist beauty of the material. Minimalist, high-contrast, black and white aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNO7MTQSnuV8Ka4x0z1bN1gbCIeVt5wC8bU1bGrKrLQprG4hlI2sKXjGBxCwT6DGjzrzZZWUlpD-yZpRyMtd-lFw7_7QVacSl7sGP9zo4nWjLBP2FtJE8qJoVSAphzAAtcecxfU-1o0gXkS9EcO7ZAAcWkAPeqI4UhwLKwr64-yU9oiviaOGXbWliMsll1oKWzBcxd4v-ZxP8HNIljO8wt_7PlsZU1SkQAGM_LXghuL4Yftu_RDdmQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-monolith-black/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-gallery-white/70 mb-2">Primary Surface</p>
+<h4 class="font-headline-md text-headline-md text-gallery-white">Obsidian Basalt</h4>
+</div>
+</div>
+<!-- Stacked Elements -->
+<div class="flex flex-col gap-gutter h-[600px]">
+<div class="flex-1 relative overflow-hidden group reveal-up" style="transition-delay: 200ms;">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="A close-up, high-resolution shot of dark, smoked oak wood grain used in luxury kitchen cabinetry. The texture is rich, linear, and meticulously finished, showcasing the natural pores and subtle variations in the deep brown-black tone. The lighting is soft and even, highlighting the matte, architectural quality of the wood veneer. The aesthetic is sophisticated, quiet, and minimalist." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-LBX4IrLeJD3BAWUJzcEI6tkZexZOTPWX_OmG0jpVWSnR3YK4SHmez6_14kUOatF0Uy4bCAn_2nNEYUIMYrZ0pp3QcDtimRdQXTD-ZNDQ4IXdAx4DrGfKA1gOt6qK0uDn38Vswap-wza-qqdWbeI7XCzbPdwQSZx2rohk02FGtWSPJMiQ_eIDSAthWofQBHfQFbN7DoxkK87xZtzxN7bc0MDKM3B1LidnVF0in38UirouAComa1Z8')"></div>
+<div class="absolute inset-0 bg-monolith-black/20"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-gallery-white/90 mb-1">Veneer</p>
+<h4 class="font-body-lg text-body-lg text-gallery-white">Smoked Oak</h4>
+</div>
+</div>
+<div class="flex-1 relative overflow-hidden group reveal-up" style="transition-delay: 300ms;">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="An abstract, macro detail shot of brushed stainless steel intersecting with matte black anodized aluminum. This represents the structural hardware of a high-end kitchen system. The image is a study in sharp geometric lines, metallic reflections, and perfect manufacturing tolerances. High contrast, monochromatic palette, brutalist and industrial yet highly refined and minimalist." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTJny4gzy-4JK9Wb88l0mHH4ln9As-LN13Jw-oBKobpAytPIIE3YJ5nPjcJXTiIWRyplzIrebZQ3avfu3C-SxsUrAjWKoIX8Kep6fyTEcDdoQsBWjJmiz6RazZPKxUtsRETrDcmFPKlbxd29f1PJFlrZo9Z7vRJhpULfxFj5SZUJSnYPbFnai7_QO8psRWsrPrIBR8WmuCcgFh7KBltGS8mQrnsDZsfQ_1zyd6NyvnJpoF1gQ1_JZH')"></div>
+<div class="absolute inset-0 bg-monolith-black/20"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-gallery-white/90 mb-1">Hardware</p>
+<h4 class="font-body-lg text-body-lg text-gallery-white">Anodized Alloy</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery of Precision -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-monolith-black text-gallery-white">
+<div class="flex justify-between items-end mb-16 reveal-up">
+<div>
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-outline-variant mb-4">03 / Iterations</h2>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-gallery-white">Gallery of Precision</h3>
+</div>
+<div class="hidden md:flex gap-4">
+<button class="p-4 border border-outline-variant/30 hover:bg-gallery-white hover:text-monolith-black transition-colors duration-300">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="p-4 border border-outline-variant/30 hover:bg-gallery-white hover:text-monolith-black transition-colors duration-300">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="group cursor-pointer reveal-up">
+<div class="relative overflow-hidden mb-6 aspect-[1.58]">
+<img alt="Kitchen Model 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida/AP1WRLtuJPplXRe-qgiXI6keZcnaI_yCGVTdDnPlBYrZQ__1iHPkMNS8Oh-y9HXmULlh4MEpzW06zWUI7ZZG3sJGPRFvhriNCAS2FGQ8rE5IX4VveyNvrl_oPb9DiGqJSENXZIcdXWlQ77XYoUhN94Hr4hnijYM7oxAaV7t1VAPukXJyNo2uVmdFQOpUdwdKa12oCtaIDTGdN3nJ4DXZj9yhca2h5AUQRfym08eR-RKGgesUoH7f5srVCmwZeWY"/>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant/30 pb-4">
+<span class="font-body-lg text-body-lg">System Alpha / Linear</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-gallery-white transition-colors duration-300">north_east</span>
+</div>
+</div>
+<div class="group cursor-pointer reveal-up" style="transition-delay: 200ms;">
+<div class="relative overflow-hidden mb-6 aspect-[1.58]">
+<img alt="Kitchen Model 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida/AP1WRLsYGArpPVV_lcD4hwMw5MKcckncMGW_o5a5FA8ewA4Ol7bE4MC4s2oEs3tgYHLmLwxl2JjCmh4E0xDCg_kswg0l3uwV1e7VVdGuV9T-9it0G-GwXD0LWpOM0ZZScaZhOHKdHYzfdxud7whxM1JOAEiOTuPh6UGg7IF6bKvcomHT5xnar4WCaRZDNxNHF_wIMg_gE8zT1LkLLGpaRVfCbB-H849gvkRIIneaxBEB6-gK2MSjS4KxcohhyQ"/>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant/30 pb-4">
+<span class="font-body-lg text-body-lg">System Beta / Island</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-gallery-white transition-colors duration-300">north_east</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-monolith-black dark:bg-monolith-black text-gallery-white dark:text-gallery-white font-body-md w-full mt-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-section-gap transition-all duration-500 ease-in-out">
+<div class="col-span-1 md:col-span-4 flex flex-col justify-between">
+<div class="font-headline-lg text-headline-lg text-gallery-white mb-8">
+                Binova Interio
+            </div>
+<p class="text-outline-variant text-sm max-w-xs">© 2024 Binova Interio. All rights reserved. Architectural Purity.</p>
+</div>
+<div class="col-span-1 md:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4 font-label-sm text-label-sm uppercase tracking-widest">
+<span class="text-outline-variant mb-2">Social</span>
+<a class="text-outline-variant hover:text-muted-sage transition-colors duration-500" href="#">Instagram</a>
+<a class="text-outline-variant hover:text-muted-sage transition-colors duration-500" href="#">LinkedIn</a>
+<a class="text-outline-variant hover:text-muted-sage transition-colors duration-500" href="#">Pinterest</a>
+</div>
+<div class="flex flex-col gap-4 font-label-sm text-label-sm uppercase tracking-widest">
+<span class="text-outline-variant mb-2">Legal</span>
+<a class="text-outline-variant hover:text-muted-sage transition-colors duration-500" href="#">Privacy</a>
+<a class="text-outline-variant hover:text-muted-sage transition-colors duration-500" href="#">Terms</a>
+</div>
+<div class="flex flex-col gap-4 font-label-sm text-label-sm uppercase tracking-widest col-span-2 md:col-span-1">
+<span class="text-outline-variant mb-2">Stay Updated</span>
+<a class="text-outline-variant hover:text-muted-sage transition-colors duration-500" href="#">Newsletter</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple reveal animation observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-up').forEach((elem) => {
+            observer.observe(elem);
+        });
+    </script>
+</body></html>

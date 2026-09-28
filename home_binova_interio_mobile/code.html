@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Binova Interio - Quiet Luxury</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "gallery-white": "#FFFFFF",
+                        "on-surface-variant": "#4c4546",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "surface-dim": "#dadada",
+                        "surface-container": "#eeeeee",
+                        "monolith-black": "#000000",
+                        "surface-variant": "#e2e2e2",
+                        "on-tertiary-container": "#848484",
+                        "on-background": "#1a1c1c",
+                        "concrete-light": "#F2F2F2",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "muted-sage": "#718466",
+                        "on-primary-container": "#848484",
+                        "primary-fixed": "#e2e2e2",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-surface": "#1a1c1c",
+                        "primary-container": "#1b1b1b",
+                        "obsidian-gray": "#1A1A1A",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-primary-fixed": "#1b1b1b",
+                        "primary": "#000000",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#cfc4c5",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-container-low": "#f3f3f4",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "tertiary": "#000000",
+                        "outline": "#7e7576",
+                        "surface": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-primary": "#c6c6c6",
+                        "tertiary-container": "#1b1b1b",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#5e5e5e",
+                        "secondary-container": "#e2dfde",
+                        "secondary": "#5f5e5e",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-secondary-container": "#636262",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-fixed-variant": "#474746",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "section-gap-mobile": "80px",
+                        "unit": "8px",
+                        "margin-tablet": "48px",
+                        "gutter": "24px",
+                        "margin-mobile": "24px",
+                        "section-gap-desktop": "160px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-xs": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-xl": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "300" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "label-xs": ["10px", { "lineHeight": "12px", "letterSpacing": "0.2em", "fontWeight": "700" }],
+                        "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "display-xl": ["80px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "200" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #FFFFFF;
+            color: #000000;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* TopAppBar Scrolled State */
+        .scrolled-header {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+        }
+
+        /* Hide scrollbar for clean look */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-lg">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 transition-all duration-500 flex justify-between items-center px-margin-mobile h-16 bg-gallery-white/80 dark:bg-monolith-black/80 backdrop-blur-md border-b border-obsidian-gray/10" id="main-header">
+<div aria-label="Open Navigation" class="flex items-center hover:opacity-70 transition-opacity duration-500 cursor-pointer" id="menu-trigger" role="button">
+<span class="material-symbols-outlined text-primary dark:text-on-primary font-label-sm text-label-sm mr-2" style="font-variation-settings: 'FILL' 0;">menu</span>
+<span class="font-label-sm text-label-sm text-primary dark:text-on-primary hidden sm:inline-block">MENU</span>
+</div>
+<div class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-on-primary">
+            BINOVA INTERIO
+        </div>
+<div class="w-6 hidden sm:block"></div> <!-- Spacer for center alignment -->
+</header>
+<!-- NavigationDrawer (Hidden by default, triggered via JS) -->
+<nav class="fixed inset-0 z-[60] w-screen h-screen bg-gallery-white dark:bg-monolith-black flex flex-col justify-center items-start px-margin-mobile gap-8 opacity-0 pointer-events-none transition-opacity duration-1000" id="nav-drawer">
+<div class="absolute top-0 w-full left-0 flex justify-between items-center px-margin-mobile h-16 border-b border-obsidian-gray/10">
+<div aria-label="Close Navigation" class="flex items-center cursor-pointer hover:opacity-70 transition-opacity duration-500" id="close-menu" role="button">
+<span class="material-symbols-outlined text-primary dark:text-on-primary font-label-sm text-label-sm mr-2">close</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary dark:text-on-primary">
+                COLLECTIONS
+            </div>
+<div class="w-6"></div>
+</div>
+<div class="flex flex-col gap-8 w-full mt-16">
+<a class="flex items-center gap-4 group" href="#">
+<span class="material-symbols-outlined text-secondary dark:text-secondary-fixed opacity-40 group-hover:text-primary transition-colors duration-500">countertops</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-secondary dark:text-secondary-fixed opacity-40 hover:pl-4 transition-all duration-700 ease-in-out group-hover:text-primary group-hover:opacity-100">Kitchen</span>
+</a>
+<a class="flex items-center gap-4 group" href="#">
+<span class="material-symbols-outlined text-secondary dark:text-secondary-fixed opacity-40 group-hover:text-primary transition-colors duration-500">weekend</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-secondary dark:text-secondary-fixed opacity-40 hover:pl-4 transition-all duration-700 ease-in-out group-hover:text-primary group-hover:opacity-100">Living</span>
+</a>
+<a class="flex items-center gap-4 group" href="#">
+<span class="material-symbols-outlined text-secondary dark:text-secondary-fixed opacity-40 group-hover:text-primary transition-colors duration-500">bathtub</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-secondary dark:text-secondary-fixed opacity-40 hover:pl-4 transition-all duration-700 ease-in-out group-hover:text-primary group-hover:opacity-100">Bath</span>
+</a>
+<a class="flex items-center gap-4 group" href="#">
+<span class="material-symbols-outlined text-secondary dark:text-secondary-fixed opacity-40 group-hover:text-primary transition-colors duration-500">architecture</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-secondary dark:text-secondary-fixed opacity-40 hover:pl-4 transition-all duration-700 ease-in-out group-hover:text-primary group-hover:opacity-100">Projects</span>
+</a>
+<a class="flex items-center gap-4 group" href="#">
+<span class="material-symbols-outlined text-secondary dark:text-secondary-fixed opacity-40 group-hover:text-primary transition-colors duration-500">auto_stories</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-secondary dark:text-secondary-fixed opacity-40 hover:pl-4 transition-all duration-700 ease-in-out group-hover:text-primary group-hover:opacity-100">Our Narrative</span>
+</a>
+</div>
+</nav>
+<main class="flex-grow pt-16">
+<!-- Hero Section -->
+<section class="relative w-full h-[90vh] md:h-screen flex items-end overflow-hidden">
+<!-- Shader Background -->
+<div class="absolute inset-0 z-0 opacity-80 mix-blend-multiply">
+<!-- STITCH_SHADER_START:ANIMATION_57 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_57" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_57');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Slow, subtle noise-based movement representing "Architectural Silence"
+    float noise = sin(uv.x * 3.0 + u_time * 0.2) * cos(uv.y * 2.0 - u_time * 0.15);
+    noise += sin(uv.y * 5.0 + u_time * 0.1) * 0.5;
+    
+    // Very subtle gradient shifts within a limited architectural palette
+    // Mixing Obsidian Gray (#1a1a1a) and Monolith Black (#0d0d0d)
+    vec3 color1 = vec3(0.05, 0.05, 0.05); // Monolith Black
+    vec3 color2 = vec3(0.1, 0.1, 0.1);    // Slightly lighter Obsidian
+    
+    vec3 finalColor = mix(color1, color2, noise * 0.5 + 0.5);
+    
+    // Vignette effect for depth
+    float vignette = length(uv - 0.5);
+    finalColor *= 1.0 - vignette * 0.4;
+    
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_57 -->
+</div>
+<!-- Hero Image -->
+<div class="absolute inset-0 z-10">
+<img alt="Cinematic Italian Kitchen" class="w-full h-full object-cover object-center opacity-90 scale-105 transform origin-bottom transition-transform duration-[10s] ease-out hover:scale-100" src="https://lh3.googleusercontent.com/aida/AP1WRLsYGArpPVV_lcD4hwMw5MKcckncMGW_o5a5FA8ewA4Ol7bE4MC4s2oEs3tgYHLmLwxl2JjCmh4E0xDCg_kswg0l3uwV1e7VVdGuV9T-9it0G-GwXD0LWpOM0ZZScaZhOHKdHYzfdxud7whxM1JOAEiOTuPh6UGg7IF6bKvcomHT5xnar4WCaRZDNxNHF_wIMg_gE8zT1LkLLGpaRVfCbB-H849gvkRIIneaxBEB6-gK2MSjS4KxcohhyQ"/>
+</div>
+<!-- Gradient Overlay for Text Readability -->
+<div class="absolute inset-0 z-20 bg-gradient-to-t from-monolith-black/60 to-transparent"></div>
+<!-- Hero Content -->
+<div class="relative z-30 w-full px-margin-mobile pb-section-gap-mobile flex flex-col justify-end text-gallery-white">
+<h2 class="font-label-xs text-label-xs uppercase tracking-[0.2em] mb-4 text-gallery-white/80 reveal-on-scroll">Quiet Luxury</h2>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tighter reveal-on-scroll delay-100">Binova Interio</h1>
+</div>
+</section>
+<!-- Work Samples / Projects -->
+<section class="w-full bg-gallery-white py-section-gap-mobile">
+<div class="px-margin-mobile mb-gutter reveal-on-scroll">
+<h3 class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-secondary">Selected Works</h3>
+</div>
+<div class="flex flex-col gap-section-gap-mobile">
+<!-- Project 1 -->
+<article class="w-full reveal-on-scroll">
+<div class="w-full h-[70vh] md:h-[80vh] overflow-hidden">
+<img alt="Kitchen Interior Detail" class="w-full h-full object-cover parallax-img transform hover:scale-105 transition-transform duration-[2s] ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn1EzZh8YHZA-MTtTmOTOoxzWAZkmmoH3JvRtAemHiB68qQo92ZEX-kBVVJRgiJVC0d99hqTway9mgbqcc53Kq76Q3WdUUL8CQZZ4qDfbcaDM2AYF0WjKPV9BjvtIObs3eEZvUqdskpzNOQ0qVgwAKQHdB26hdD4r4HAxzpGTWiQoLmQJbsV8opm75fvb3NyYaKuf_eoPBCDR_xn4Ec2mB_UncxQc-4icRx0vk4H_kqs_PO-BOWXvlPytDzcAHXkIoqg"/>
+</div>
+<div class="px-margin-mobile pt-4 flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<h4 class="font-label-sm text-label-sm text-primary uppercase">Milan Residence</h4>
+<p class="font-label-xs text-label-xs text-secondary tracking-widest">KITCHEN INSTALLATION</p>
+</div>
+<span class="font-label-xs text-label-xs text-secondary">01</span>
+</div>
+</article>
+<!-- Project 2 -->
+<article class="w-full reveal-on-scroll">
+<div class="w-full h-[70vh] md:h-[80vh] overflow-hidden">
+<img alt="Living Space Detail" class="w-full h-full object-cover parallax-img transform hover:scale-105 transition-transform duration-[2s] ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmOTHhO_Bd8cGEw7LnKVF4CX2YZsOB8lE_9B_nyANKmryN4_YOvaHTOnjwUoqC5hYf0iqMCJER8tHxnzi3YVctF_x-QePFhKccQMLI0Tl--vvu37CnohJ5MRG0SaqCmeNRCrwyekpzUnVX2BaBPkcaIdCEfYXM9QmYolAOLlV71J2kr4YM468DpkGPVGbA3TkSmyc3sYWmMQRdo0zQ4rOOhJy1-ci34jC2oE-cZiVrjx8LS1ITAg6b7xOvMvD4Dy7Lqw"/>
+</div>
+<div class="px-margin-mobile pt-4 flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<h4 class="font-label-sm text-label-sm text-primary uppercase">Lake Como Villa</h4>
+<p class="font-label-xs text-label-xs text-secondary tracking-widest">LIVING SYSTEMS</p>
+</div>
+<span class="font-label-xs text-label-xs text-secondary">02</span>
+</div>
+</article>
+<!-- Project 3 -->
+<article class="w-full reveal-on-scroll">
+<div class="w-full h-[70vh] md:h-[80vh] overflow-hidden">
+<img alt="Architectural Detail" class="w-full h-full object-cover parallax-img transform hover:scale-105 transition-transform duration-[2s] ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkAOtZ_kVWCysDwxC2QhsrmYaOjQRsQoUCf9R-EPR91qYddOs6tkNEeG9nGvhT_OEq6uK-JLPJ4y_ZMoGqDOe2epqgAb8hdLLOGlPsI5c3MeNMscxhMA04kXFTQhWFCViQk1s7KoJpLKSYwq7rOL8BvmgMX4svom6vprDXDQRfI40P0c69cVl_RovM1OZBIcWeQfLcQKOKwhhlvVMQon_WhUjU41LqYeq_2Gx2aQeVmfYUcfTQLU7Dz_nTHoSGG02RIA"/>
+</div>
+<div class="px-margin-mobile pt-4 flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<h4 class="font-label-sm text-label-sm text-primary uppercase">Rome Penthouse</h4>
+<p class="font-label-xs text-label-xs text-secondary tracking-widest">ARCHITECTURAL VOIDS</p>
+</div>
+<span class="font-label-xs text-label-xs text-secondary">03</span>
+</div>
+</article>
+</div>
+</section>
+<!-- Narrative Section -->
+<section class="w-full bg-surface-container py-section-gap-mobile px-margin-mobile md:px-margin-desktop flex flex-col items-center justify-center text-center min-h-[50vh]">
+<div class="max-w-2xl reveal-on-scroll">
+<h3 class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-secondary mb-8">Heritage of Precision</h3>
+<p class="font-headline-md text-headline-md md:font-headline-lg md:text-headline-lg text-primary tracking-tighter leading-tight mb-8">
+                    Crafting spaces where Italian engineering meets material honesty. We design voids that speak volumes.
+                </p>
+<a class="inline-flex items-center justify-center border border-obsidian-gray text-primary font-label-sm text-label-sm uppercase tracking-widest h-12 px-8 hover:bg-monolith-black hover:text-gallery-white transition-colors duration-300" href="#">
+                    Our Narrative
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-obsidian-gray dark:bg-monolith-black text-gallery-white dark:text-on-primary border-t border-on-tertiary-fixed-variant flex flex-col px-margin-mobile py-section-gap-mobile gap-gutter">
+<div class="font-headline-md text-headline-md text-gallery-white mb-8">
+            BINOVA INTERIO
+        </div>
+<div class="grid grid-cols-2 gap-8 mb-16">
+<div class="flex flex-col gap-4">
+<h5 class="font-label-xs text-label-xs text-tertiary-fixed-dim uppercase tracking-[0.2em]">Social</h5>
+<a class="font-label-xs text-label-xs text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500 uppercase tracking-[0.2em]" href="#">Instagram</a>
+<a class="font-label-xs text-label-xs text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500 uppercase tracking-[0.2em]" href="#">LinkedIn</a>
+<a class="font-label-xs text-label-xs text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500 uppercase tracking-[0.2em]" href="#">Pinterest</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-xs text-label-xs text-tertiary-fixed-dim uppercase tracking-[0.2em]">Contact</h5>
+<a class="font-label-xs text-label-xs text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500 uppercase tracking-[0.2em]" href="#">Address</a>
+<a class="font-label-xs text-label-xs text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500 uppercase tracking-[0.2em]" href="#">Phone</a>
+<a class="font-label-xs text-label-xs text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500 uppercase tracking-[0.2em]" href="#">Email</a>
+</div>
+</div>
+<div class="font-label-xs text-label-xs text-tertiary-fixed-dim uppercase tracking-[0.2em] border-t border-on-tertiary-fixed-variant pt-8">
+            © 2024 Binova Interio. All rights reserved.
+        </div>
+</footer>
+<script>
+        // Scroll Animation Logic
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Header Scroll Effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled-header');
+                header.classList.remove('bg-gallery-white/80', 'border-transparent');
+            } else {
+                header.classList.remove('scrolled-header');
+                header.classList.add('bg-gallery-white/80', 'border-transparent');
+            }
+        });
+
+        // Navigation Drawer Logic
+        const menuTrigger = document.getElementById('menu-trigger');
+        const closeMenu = document.getElementById('close-menu');
+        const navDrawer = document.getElementById('nav-drawer');
+
+        menuTrigger.addEventListener('click', () => {
+            navDrawer.classList.remove('opacity-0', 'pointer-events-none');
+            navDrawer.classList.add('opacity-100', 'pointer-events-auto');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        closeMenu.addEventListener('click', () => {
+            navDrawer.classList.remove('opacity-100', 'pointer-events-auto');
+            navDrawer.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+
+    </script>
+</body></html>

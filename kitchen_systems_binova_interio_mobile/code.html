@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Binova Interio - Kitchen Systems</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "gallery-white": "#FFFFFF",
+                        "on-surface-variant": "#4c4546",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "surface-dim": "#dadada",
+                        "surface-container": "#eeeeee",
+                        "monolith-black": "#000000",
+                        "surface-variant": "#e2e2e2",
+                        "on-tertiary-container": "#848484",
+                        "on-background": "#1a1c1c",
+                        "concrete-light": "#F2F2F2",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "muted-sage": "#718466",
+                        "on-primary-container": "#848484",
+                        "primary-fixed": "#e2e2e2",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-surface": "#1a1c1c",
+                        "primary-container": "#1b1b1b",
+                        "obsidian-gray": "#1A1A1A",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-primary-fixed": "#1b1b1b",
+                        "primary": "#000000",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#cfc4c5",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-container-low": "#f3f3f4",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "tertiary": "#000000",
+                        "outline": "#7e7576",
+                        "surface": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-primary": "#c6c6c6",
+                        "tertiary-container": "#1b1b1b",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#5e5e5e",
+                        "secondary-container": "#e2dfde",
+                        "secondary": "#5f5e5e",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-secondary-container": "#636262",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-fixed-variant": "#474746",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "section-gap-mobile": "80px",
+                        "unit": "8px",
+                        "margin-tablet": "48px",
+                        "gutter": "24px",
+                        "margin-mobile": "24px",
+                        "section-gap-desktop": "160px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-xs": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-xl": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["34px", {"lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "300"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+                        "label-xs": ["10px", {"lineHeight": "12px", "letterSpacing": "0.2em", "fontWeight": "700"}],
+                        "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "200"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.gallery-white');
+            color: theme('colors.monolith-black');
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Subtle entrance animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Parallax wrapper */
+        .parallax-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .parallax-image {
+            will-change: transform;
+            transform-origin: center center;
+        }
+    </style>
+</head>
+<body class="font-body-md bg-gallery-white selection:bg-surface-dim">
+<!-- TopAppBar -->
+<header class="bg-gallery-white/80 dark:bg-monolith-black/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-obsidian-gray/10 flex justify-between items-center px-margin-mobile h-16 transition-opacity duration-500" id="top-nav">
+<button class="text-primary dark:text-on-primary hover:opacity-70 transition-opacity duration-500 focus:outline-none flex items-center justify-center w-12 h-12 -ml-3" id="menu-btn">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<span class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-on-primary">BINOVA INTERIO</span>
+<div class="w-12"></div> <!-- Spacer for centering -->
+</header>
+<!-- NavigationDrawer (Hidden by default) -->
+<nav class="fixed inset-0 z-[60] w-screen h-screen bg-gallery-white dark:bg-monolith-black flex flex-col justify-center items-start px-margin-mobile gap-8 opacity-0 pointer-events-none transition-opacity duration-1000" id="nav-drawer">
+<button class="absolute top-4 left-4 text-primary dark:text-on-primary p-4 focus:outline-none" id="close-menu-btn">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="mb-4">
+<h2 class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-secondary">COLLECTIONS</h2>
+</div>
+<a class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-on-primary font-light flex items-center gap-4 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl">countertops</span>
+            Kitchen
+        </a>
+<a class="font-headline-lg-mobile text-headline-lg-mobile text-secondary dark:text-secondary-fixed opacity-40 flex items-center gap-4 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl">weekend</span>
+            Living
+        </a>
+<a class="font-headline-lg-mobile text-headline-lg-mobile text-secondary dark:text-secondary-fixed opacity-40 flex items-center gap-4 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl">bathtub</span>
+            Bath
+        </a>
+<a class="font-headline-lg-mobile text-headline-lg-mobile text-secondary dark:text-secondary-fixed opacity-40 flex items-center gap-4 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl">architecture</span>
+            Projects
+        </a>
+<a class="font-headline-lg-mobile text-headline-lg-mobile text-secondary dark:text-secondary-fixed opacity-40 flex items-center gap-4 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl">auto_stories</span>
+            Our Narrative
+        </a>
+</nav>
+<main class="pt-16 pb-section-gap-mobile">
+<!-- Hero Section -->
+<section class="h-[85vh] w-full px-margin-mobile pt-8 flex flex-col justify-between">
+<div class="fade-up">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-monolith-black">Monolithic Precision.</h1>
+<p class="font-body-md text-body-md text-secondary mt-4 max-w-xs">The kitchen reimagined as a singular architectural volume. Restraint in form, absolute utility in function.</p>
+</div>
+<div class="parallax-wrapper h-[60vh] w-full mt-8 bg-surface-dim relative">
+<img alt="Monolithic Kitchen Island" class="parallax-image absolute inset-0 w-full h-[120%] object-cover object-center -top-[10%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP9y_ZFVviKkFEHJWuyllPleGi-_mVsuekz3XIq4p4moHZxlaERYpOmzz__PpBE6U0Aq0Lfyyd4Trf41zCBresPzP432SB8QwDWiyWguyh8XVDIbXpAseYOUHhaWI1UaypM5ycI0r2-BlIAKzhci4f6gcb7EY8Zbz8DKBBxygOUzlPC3KXw1WmjZMIwHdkhJ1dYQ1O6IlN2W8_Vs-i9t4G-2rOtVHXa843PPylA4iISX-X-M035R97U3k7dTBAsc6uCw"/>
+<div class="absolute inset-0 border border-obsidian-gray/10 pointer-events-none"></div>
+</div>
+</section>
+<!-- Technical Specification Gallery -->
+<section class="mt-section-gap-mobile px-margin-mobile flex flex-col gap-16">
+<!-- Gallery Item 1 -->
+<div class="flex flex-col gap-6 fade-up">
+<div class="parallax-wrapper h-[50vh] w-full bg-surface-dim relative">
+<img alt="Kitchen Installation Detail" class="parallax-image absolute inset-0 w-full h-[120%] object-cover object-center -top-[10%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaVb45ZQhYXinTgsQW2Lqz1rZla2ouyWb2505gpKU7n8CVS_gWGaOcILnfl79w0pBpAd5DYJG6LP5CtRXn-kdbPHjEWrlLuFcq42ubYxDZkY0csQRxNOUWnk3_pJF1rVUgJLSmCAy1iZ3xeaxf7KvVIgIWpaQMJPgdaTlQxTY4yMO65rQlr_K_T8zz9cHagtcKHcFpcIfyGFSVYhZ6mk_nn27XS2XsiON2Nd0Wzhv6tEsa88AY2KjUyCTSTedaHSkqTw"/>
+<div class="absolute inset-0 border border-obsidian-gray/10 pointer-events-none"></div>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-monolith-black">Linear Integration</h3>
+<div class="w-full h-px bg-obsidian-gray/20 my-2"></div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<span class="font-label-xs text-label-xs text-secondary block mb-1">MATERIAL</span>
+<span class="font-body-md text-body-md text-monolith-black">Fenix NTM®</span>
+</div>
+<div>
+<span class="font-label-xs text-label-xs text-secondary block mb-1">FINISH</span>
+<span class="font-body-md text-body-md text-monolith-black">Matte Black</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Gallery Item 2 -->
+<div class="flex flex-col gap-6 fade-up">
+<div class="parallax-wrapper h-[60vh] w-full bg-surface-dim relative">
+<img alt="Kitchen Hardware Detail" class="parallax-image absolute inset-0 w-full h-[120%] object-cover object-center -top-[10%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_0cVNhZI7yxCp7n5b69IeNieTCmLYPnfQXQsqFE0ieXhUUTvozTD8XpAKtvAmU9mpdTt4EGtgU2ClXh05XC65XYjf_BvlRlq_4OiVDWa2kS4VRdQ2YaerljNu0UGRgIlsatJgcl_dVV5acG02INsgP_8asak9iq9B740oh2BdbHvl3nT4l7Hc3iKR2rVv49fNMPUoR4qkUAzUCJ_Livbtlk5YGfKWDIq4KfzdbSvYaigzvfYb0wf5htaQegGl8Zi13g"/>
+<div class="absolute inset-0 border border-obsidian-gray/10 pointer-events-none"></div>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-monolith-black">Concealed Utility</h3>
+<div class="w-full h-px bg-obsidian-gray/20 my-2"></div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<span class="font-label-xs text-label-xs text-secondary block mb-1">HARDWARE</span>
+<span class="font-body-md text-body-md text-monolith-black">Blum Legrabox</span>
+</div>
+<div>
+<span class="font-label-xs text-label-xs text-secondary block mb-1">SYSTEM</span>
+<span class="font-body-md text-body-md text-monolith-black">Handleless</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-section-gap-mobile px-margin-mobile fade-up flex flex-col items-center text-center">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-monolith-black mb-8">Begin your narrative.</h2>
+<button class="w-full h-12 bg-monolith-black text-gallery-white font-label-sm text-label-sm uppercase tracking-[0.15em] flex items-center justify-center hover:bg-obsidian-gray transition-colors duration-300 focus:outline-none">
+                REQUEST A CONSULTATION
+            </button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-obsidian-gray dark:bg-monolith-black w-full border-t border-on-tertiary-fixed-variant flex flex-col px-margin-mobile py-section-gap-mobile gap-gutter">
+<div class="font-headline-md text-headline-md text-gallery-white mb-8">BINOVA INTERIO</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Instagram</a>
+<a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">LinkedIn</a>
+<a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Pinterest</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Address</a>
+<a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Phone</a>
+<a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Email</a>
+</div>
+</div>
+<div class="w-full h-px bg-on-tertiary-fixed-variant/50 mt-8 mb-4"></div>
+<p class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim">© 2024 Binova Interio. All rights reserved.</p>
+</footer>
+<script>
+        // Menu Toggle Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const navDrawer = document.getElementById('nav-drawer');
+        const body = document.body;
+
+        function toggleMenu() {
+            const isClosed = navDrawer.classList.contains('opacity-0');
+            if (isClosed) {
+                navDrawer.classList.remove('opacity-0', 'pointer-events-none');
+                body.style.overflow = 'hidden';
+            } else {
+                navDrawer.classList.add('opacity-0', 'pointer-events-none');
+                body.style.overflow = '';
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+
+        // Intersection Observer for fade-up animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Simple Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelectorAll('.parallax-image').forEach(img => {
+                const rect = img.parentElement.getBoundingClientRect();
+                // Only calculate if element is somewhat in view to save processing
+                if(rect.top < window.innerHeight && rect.bottom > 0) {
+                     const yPos = (rect.top * 0.15); // Adjust multiplier for stronger/weaker effect
+                     img.style.transform = `translate3d(0, ${yPos}px, 0)`;
+                }
+            });
+            
+            // Top nav subtle shadow/opacity on scroll
+            const topNav = document.getElementById('top-nav');
+            if (scrolled > 50) {
+                topNav.classList.add('shadow-sm');
+            } else {
+                topNav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

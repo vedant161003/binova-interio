@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+/* Setup root element and transitions */
+:root {
+  --font-hanken: 'Hanken Grotesk', sans-serif;
+  --transition-smooth: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --color-monolith: #000000;
+  --color-gallery: #FFFFFF;
+  --color-sage: #718466;
+  --color-outline: #7e7576;
+}
+
+/* View transitions for cross-page animations */
+@view-transition {
+  navigation: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #FFFFFF;
+}
+
+/* Body entrance animation */
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: var(--font-hanken);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  animation: fadeInPage 0.6s ease-out forwards;
+}
+
+/* ─── Skip to Content (Accessibility) ─── */
+.skip-to-content {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background: var(--color-monolith);
+  color: var(--color-gallery);
+  padding: 12px 24px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+  top: 8px;
+  outline: 2px solid var(--color-sage);
+  outline-offset: 2px;
+}
+
+/* ─── Custom Scrollbar ─── */
+/* Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F9F9F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DADAda;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7E7576;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #DADAda #F9F9F9;
+}
+
+/* Hide scrollbars specifically for clean lookbook states if requested */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ─── Material Symbols Override ─── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* ─── Header Transparent State ─── */
+.header-transparent {
+  background-color: transparent;
+  border-bottom-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* ─── Scroll Progress Bar ─── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--color-monolith);
+  z-index: 9999;
+  transition: width 0.05s linear;
+  pointer-events: none;
+}
+
+/* ─── Scroll Reveal Animations ─── */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Hover Zoom Effects ─── */
+.image-container-zoom {
+  overflow: hidden;
+  position: relative;
+}
+
+.image-zoom {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-container-zoom:hover .image-zoom {
+  transform: scale(1.04);
+}
+
+/* ─── Lazy Image Fade-In ─── */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+img[loading="lazy"].img-loaded,
+img.img-loaded {
+  opacity: 1;
+}
+
+/* Hero images and images without lazy should always show */
+img[fetchpriority="high"],
+img:not([loading="lazy"]) {
+  opacity: 1;
+}
+
+/* ─── Navigation Drawer ─── */
+.drawer-link {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#nav-drawer.active .drawer-link {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Staggered delays for drawer links */
+#nav-drawer.active .drawer-link:nth-child(1) { transition-delay: 0.1s; }
+#nav-drawer.active .drawer-link:nth-child(2) { transition-delay: 0.15s; }
+#nav-drawer.active .drawer-link:nth-child(3) { transition-delay: 0.2s; }
+#nav-drawer.active .drawer-link:nth-child(4) { transition-delay: 0.25s; }
+#nav-drawer.active .drawer-link:nth-child(5) { transition-delay: 0.3s; }
+#nav-drawer.active .drawer-link:nth-child(6) { transition-delay: 0.35s; }
+
+/* ─── Parallax Scroll Effect ─── */
+.parallax-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-img {
+  will-change: transform;
+  transform: scale(1.08);
+  transition: transform 0.5s cubic-bezier(0.1, 0.8, 0.2, 1);
+}
+
+/* ─── Input Fields ─── */
+.input-line {
+  border: none !important;
+  border-bottom: 1px solid #CFC4C5 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-line:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-bottom-color: #000000 !important;
+}
+
+.input-line::placeholder {
+  color: #CFC4C5;
+  transition: opacity 0.3s ease;
+}
+
+.input-line:focus::placeholder {
+  opacity: 0.4;
+}
+
+/* Form validation states */
+.input-line.input-error {
+  border-bottom-color: #ba1a1a !important;
+}
+
+.input-error-message {
+  color: #ba1a1a;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.input-error-message.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Bento Grid ─── */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .bento-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
+/* ─── Back-to-Top Button ─── */
+#back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-monolith);
+  color: var(--color-gallery);
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, background-color 0.3s ease;
+  pointer-events: none;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#back-to-top:hover {
+  background: var(--color-sage);
+}
+
+#back-to-top:focus-visible {
+  outline: 2px solid var(--color-sage);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  #back-to-top {
+    bottom: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ─── Accessibility Focus Styles ─── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--color-sage);
+  outline-offset: 2px;
+}
+
+/* Remove default focus outline (replaced with focus-visible) */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+[role="button"]:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ─── Content Visibility (Performance) ─── */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+/* ─── Mobile Spacing ─── */
+@media (max-width: 767px) {
+  /* Reduce hero heights on small screens to account for browser chrome */
+  .h-screen-mobile-safe {
+    height: calc(100vh - 56px);
+    height: calc(100dvh - 56px);
+  }
+
+  /* Ensure min tap targets */
+  a, button, [role="button"], select, input, textarea {
+    min-height: 44px;
+  }
+
+  /* Tighter label text doesn't need 44px height */
+  .text-xs, .text-\[10px\] {
+    min-height: auto;
+  }
+}
+
+/* ─── Projects Filter Bar: Horizontal Scroll on Mobile ─── */
+@media (max-width: 767px) {
+  .filter-scroll-mobile {
+    overflow-x: auto;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 4px;
+  }
+
+  .filter-scroll-mobile::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-scroll-mobile button {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}
+
+/* ─── Print Styles ─── */
+@media print {
+  header,
+  #nav-drawer,
+  #cookie-banner,
+  #scroll-progress,
+  #back-to-top,
+  .skip-to-content {
+    display: none !important;
+  }
+
+  body {
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+}

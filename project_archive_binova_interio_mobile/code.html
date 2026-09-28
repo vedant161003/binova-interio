@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Binova Interio - Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "gallery-white": "#FFFFFF",
+                      "on-surface-variant": "#4c4546",
+                      "on-tertiary-fixed": "#1b1b1b",
+                      "surface-dim": "#dadada",
+                      "surface-container": "#eeeeee",
+                      "monolith-black": "#000000",
+                      "surface-variant": "#e2e2e2",
+                      "on-tertiary-container": "#848484",
+                      "on-background": "#1a1c1c",
+                      "concrete-light": "#F2F2F2",
+                      "tertiary-fixed-dim": "#c6c6c6",
+                      "muted-sage": "#718466",
+                      "on-primary-container": "#848484",
+                      "primary-fixed": "#e2e2e2",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-surface": "#1a1c1c",
+                      "primary-container": "#1b1b1b",
+                      "obsidian-gray": "#1A1A1A",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-primary-fixed": "#1b1b1b",
+                      "primary": "#000000",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#cfc4c5",
+                      "on-tertiary-fixed-variant": "#474747",
+                      "inverse-on-surface": "#f0f1f1",
+                      "surface-container-low": "#f3f3f4",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "tertiary": "#000000",
+                      "outline": "#7e7576",
+                      "surface": "#f9f9f9",
+                      "background": "#f9f9f9",
+                      "on-error": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#2f3131",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "inverse-primary": "#c6c6c6",
+                      "tertiary-container": "#1b1b1b",
+                      "on-secondary": "#ffffff",
+                      "surface-tint": "#5e5e5e",
+                      "secondary-container": "#e2dfde",
+                      "secondary": "#5f5e5e",
+                      "on-primary-fixed-variant": "#474747",
+                      "on-secondary-container": "#636262",
+                      "surface-container-high": "#e8e8e8",
+                      "on-secondary-fixed-variant": "#474746",
+                      "secondary-fixed": "#e5e2e1",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "surface-bright": "#f9f9f9"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "section-gap-mobile": "80px",
+                      "unit": "8px",
+                      "margin-tablet": "48px",
+                      "gutter": "24px",
+                      "margin-mobile": "24px",
+                      "section-gap-desktop": "160px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-xs": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-sm": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-xl": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "34px",
+                              {
+                                      "lineHeight": "42px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "label-xs": [
+                              "10px",
+                              {
+                                      "lineHeight": "12px",
+                                      "letterSpacing": "0.2em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "11px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "80px",
+                              {
+                                      "lineHeight": "90px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "200"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Hide scrollbar for horizontal scroll but allow scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gallery-white text-primary font-body-lg antialiased selection:bg-surface-dim">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-gallery-white/80 dark:bg-monolith-black/80 backdrop-blur-md border-b border-obsidian-gray/10 flex justify-between items-center px-margin-mobile h-16 transition-transform duration-300">
+<button aria-label="Menu" class="text-primary hover:opacity-70 transition-opacity duration-500" onclick="toggleDrawer()">
+<span class="material-symbols-outlined font-label-sm text-label-sm" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<div class="font-headline-md text-headline-md tracking-tighter text-primary">
+            BINOVA INTERIO
+        </div>
+<div class="w-6"></div> <!-- Spacer for balance -->
+</header>
+<!-- NavigationDrawer (Hidden by default) -->
+<nav class="fixed inset-0 z-[60] w-screen h-screen bg-gallery-white flex flex-col justify-center items-start px-margin-mobile gap-8 opacity-0 pointer-events-none transition-opacity duration-1000" id="nav-drawer">
+<button aria-label="Close menu" class="absolute top-5 right-margin-mobile text-primary" onclick="toggleDrawer()">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<h2 class="font-headline-md text-headline-md text-primary mb-8 tracking-tighter">COLLECTIONS</h2>
+<ul class="flex flex-col gap-6 w-full">
+<li class="group">
+<a class="flex items-center gap-4 text-secondary opacity-40 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl">countertops</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile">Kitchen</span>
+</a>
+</li>
+<li class="group">
+<a class="flex items-center gap-4 text-secondary opacity-40 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl">weekend</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile">Living</span>
+</a>
+</li>
+<li class="group">
+<a class="flex items-center gap-4 text-secondary opacity-40 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl">bathtub</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile">Bath</span>
+</a>
+</li>
+<li class="group">
+<a class="flex items-center gap-4 text-primary font-light hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl">architecture</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile">Projects</span>
+</a>
+</li>
+<li class="group">
+<a class="flex items-center gap-4 text-secondary opacity-40 hover:pl-4 transition-all duration-700 ease-in-out" href="#">
+<span class="material-symbols-outlined text-2xl">auto_stories</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile">Our Narrative</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-[104px] pb-section-gap-mobile">
+<!-- Header Section -->
+<section class="px-margin-mobile mb-12 fade-in-up">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-4 tracking-tighter">ARCHIVE</h1>
+<p class="font-body-md text-body-md text-secondary max-w-sm">A curated selection of spatial interventions, demonstrating structural purity and material honesty across various typologies.</p>
+</section>
+<!-- Sticky Filter -->
+<div class="sticky top-16 z-40 bg-gallery-white/90 backdrop-blur-md border-b border-obsidian-gray/10 py-4 px-margin-mobile mb-12">
+<div class="flex gap-6 overflow-x-auto hide-scrollbar">
+<button class="font-label-sm text-label-sm tracking-[0.15em] uppercase whitespace-nowrap text-primary border-b border-primary pb-1">All Projects</button>
+<button class="font-label-sm text-label-sm tracking-[0.15em] uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors pb-1">Residential</button>
+<button class="font-label-sm text-label-sm tracking-[0.15em] uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors pb-1">Commercial</button>
+<button class="font-label-sm text-label-sm tracking-[0.15em] uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors pb-1">Industrial</button>
+<button class="font-label-sm text-label-sm tracking-[0.15em] uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors pb-1">Public</button>
+</div>
+</div>
+<!-- Project Grid -->
+<section class="flex flex-col gap-section-gap-mobile w-full">
+<!-- Project 1 -->
+<article class="w-full fade-in-up">
+<div class="w-full px-margin-mobile mb-4 flex justify-between items-end">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tighter">VILLA LUMINOSA</h2>
+<p class="font-label-xs text-label-xs text-secondary uppercase tracking-[0.2em] mt-1">Residential • 2024</p>
+</div>
+<span class="font-label-xs text-label-xs text-tertiary-fixed-dim">01</span>
+</div>
+<div class="w-full relative aspect-[1.82] bg-surface-dim">
+<img alt="" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgKgJlEMvWMz_DQWxxtDUzv_PLtoVdJpGht--gZ4h_Q9UXWAwhfCGdrzxsCGMiXqJQK_F3eMqnc7nNehmJHm-w63yRG7XW5O_uJDICMjwj8H7z4ufRNI6wcOsO-FtyDT6MsFg614Yxz5FnVR3LTBSIOuIcD-5sSPnr8TN2cNMeXlvyoNMlqfLZQ-lPzTXJ5Zr9migRp0SXrO5Ry-sCCEIALoR-KiZEsTOC-NLQBBDpXcdZcCrj5ck2uklA4GUsHumuEg"/>
+</div>
+<div class="px-margin-mobile mt-4">
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">An exploration of natural light and raw concrete volumes, creating a sanctuary of quiet luxury within an urban context.</p>
+</div>
+</article>
+<!-- Project 2 -->
+<article class="w-full fade-in-up">
+<div class="w-full px-margin-mobile mb-4 flex justify-between items-end">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tighter">CASA BIANCA</h2>
+<p class="font-label-xs text-label-xs text-secondary uppercase tracking-[0.2em] mt-1">Residential • 2023</p>
+</div>
+<span class="font-label-xs text-label-xs text-tertiary-fixed-dim">02</span>
+</div>
+<div class="w-full px-margin-mobile">
+<div class="w-full relative aspect-[0.78] bg-surface-dim">
+<img alt="" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp0Uk847gKB-MwdmXxIlIl7f94otQKgNzpW8UwzfS7zzHhtFps97dwuCSZa-pY4XO0taVU_vzNENYor2uvnRl2Rfl6vsHp-YbLPrNcP4tY90TOb-OGfGvTt8s_-1fUaI3pPwPNUxCYx5tDGLIP9uo_3z6i71En1765HpyNm5lyDNK3pgRGx2ks9UfaNt64uooWkMTxupC3vWX18u7nIRBbUcXf4oN_0pUQh2hndjpc51u59cRkyZB6UOOJiEtGIkw-7g"/>
+</div>
+</div>
+<div class="px-margin-mobile mt-4">
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">A minimalist retreat utilizing massive voids of whitespace and tactile materials to frame domestic life.</p>
+</div>
+</article>
+<!-- Project 3 -->
+<article class="w-full fade-in-up">
+<div class="w-full px-margin-mobile mb-4 flex justify-between items-end">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tighter">THE MONOLITH</h2>
+<p class="font-label-xs text-label-xs text-secondary uppercase tracking-[0.2em] mt-1">Commercial • 2023</p>
+</div>
+<span class="font-label-xs text-label-xs text-tertiary-fixed-dim">03</span>
+</div>
+<div class="w-full relative aspect-[1.20] bg-surface-dim pl-margin-mobile">
+<img alt="" class="w-full h-full object-cover object-left" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCyd7OQ6gGrksSZGoz4gh_cnZ__Pnm3-ZoSJVaEGoxvTSuae_i5_CCJYts-VRNespuxX_wNcUjOgZ1X87HgxZdpr_rWfq1u-umdMNMM-9nBclrZEERwVq8_3a0ffPL87n1ACJAon92LCpRV9gSxRctViK8nrh6aRYz7bmQVQ6Yjv7lEoIwAgD0FnN1o7VzcidAktkj2-SzFy6Cyz58vqI5_ST-2qqBdmeDDViZ6gRhakYaUWjJa58bt4gRt5SPbGifjg"/>
+</div>
+<div class="px-margin-mobile mt-4">
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">A flagship retail space designed as a solid, physical slab, emphasizing spatial precision and dramatic contrast.</p>
+</div>
+</article>
+<!-- Project 4 -->
+<article class="w-full fade-in-up">
+<div class="w-full px-margin-mobile mb-4 flex justify-between items-end">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tighter">ATELIER ZERO</h2>
+<p class="font-label-xs text-label-xs text-secondary uppercase tracking-[0.2em] mt-1">Industrial • 2022</p>
+</div>
+<span class="font-label-xs text-label-xs text-tertiary-fixed-dim">04</span>
+</div>
+<div class="w-full relative aspect-[1.81] bg-surface-dim">
+<img alt="" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp0GGghCbh4koXNHRnYiz0d0UQ1hEey9C1x_49mP81KqJs6jqHVeC97Fdk-UPvTA81cWtrnmRc_-SaTqi__S4xq9nkQtsRVEsabtG6VeMQlm7vR0ny2aI3LcW4vu2kKv0PzDxxOqjeO1NR2eMnkGZ3ap-ZJiXI1e6u59VSlQPRt_zksPzhoUmPmR5NzO9h6tq45glSmFgv_jt6Obo1YJgS9lNvGsZ5EmrVENqCogMQ8QY7-jG3poamjyiDopzqhFs6gA"/>
+</div>
+<div class="px-margin-mobile mt-4">
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Repurposed industrial architecture focusing on functional clarity defined by micro-borders and expansive open areas.</p>
+</div>
+</article>
+</section>
+<!-- Load More Action -->
+<div class="px-margin-mobile mt-section-gap-mobile flex justify-center fade-in-up">
+<button class="border border-primary px-8 h-12 font-label-sm text-label-sm uppercase tracking-[0.15em] text-primary hover:bg-primary hover:text-gallery-white transition-colors duration-300 w-full sm:w-auto">
+                Discover More
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-obsidian-gray dark:bg-monolith-black w-full border-t border-on-tertiary-fixed-variant flex flex-col px-margin-mobile py-section-gap-mobile gap-gutter">
+<div class="font-headline-md text-headline-md text-gallery-white mb-8 tracking-tighter">
+            BINOVA INTERIO
+        </div>
+<div class="grid grid-cols-2 gap-8 mb-12">
+<ul class="flex flex-col gap-4">
+<li><a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Instagram</a></li>
+<li><a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">LinkedIn</a></li>
+<li><a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Pinterest</a></li>
+</ul>
+<ul class="flex flex-col gap-4">
+<li><a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Address</a></li>
+<li><a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Phone</a></li>
+<li><a class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim hover:text-gallery-white transition-colors duration-500" href="#">Email</a></li>
+</ul>
+</div>
+<div class="font-label-xs text-label-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim mt-8">
+            © 2024 Binova Interio. All rights reserved.
+        </div>
+</footer>
+<script>
+        // Drawer Toggle Logic
+        function toggleDrawer() {
+            const drawer = document.getElementById('nav-drawer');
+            if (drawer.classList.contains('opacity-0')) {
+                drawer.classList.remove('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            } else {
+                drawer.classList.add('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Intersection Observer for fade-in animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body></html>

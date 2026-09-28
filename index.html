@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>BINOVA INTERIO | Italian Architectural Interior Design</title>
+    <meta name="description" content="Binova Interio — Italian architectural interior design studio. Bespoke kitchen systems, living concepts, and bath environments crafted with precision and material honesty since 1958.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "gallery-white": "#FFFFFF",
+                        "monolith-black": "#000000",
+                        "obsidian-gray": "#1A1A1A",
+                        "muted-sage": "#718466",
+                        "concrete-light": "#F2F2F2",
+                        "surface": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "surface-container": "#eeeeee",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-surface": "#1b1b1b",
+                        "on-surface-variant": "#4c4546",
+                        "outline": "#7e7576",
+                        "outline-variant": "#cfc4c5"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0px",
+                        lg: "0px",
+                        xl: "0px",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "section-gap": "160px",
+                        "section-gap-mobile": "80px",
+                        unit: "8px",
+                        gutter: "32px",
+                        "margin-mobile": "24px",
+                        "margin-desktop": "80px"
+                    },
+                    fontFamily: {
+                        body: ["Hanken Grotesk", "sans-serif"],
+                        display: ["Hanken Grotesk", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body class="bg-gallery-white text-on-surface font-body min-h-screen flex flex-col overflow-x-hidden selection:bg-monolith-black selection:text-gallery-white">
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+    <!-- Header Navigation -->
+    <header id="main-header" class="fixed top-0 w-full z-50 transition-all duration-500 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 md:h-20 header-transparent text-gallery-white py-6">
+        <!-- Left Side: Menu Trigger -->
+        <div id="menu-trigger" class="flex items-center hover:opacity-70 transition-opacity duration-500 cursor-pointer" role="button" aria-label="Open Navigation">
+            <span class="material-symbols-outlined mr-2">menu</span>
+            <span class="text-xs uppercase tracking-[0.2em] font-semibold hidden sm:inline-block">MENU</span>
+        </div>
+
+        <!-- Center: Brand Logo -->
+        <a href="index.html" class="absolute left-1/2 -translate-x-1/2 text-lg md:text-xl tracking-widest font-bold uppercase hover:opacity-80 transition-opacity">
+            BINOVA INTERIO
+        </a>
+
+        <!-- Right Side: Desktop Navbar Links -->
+        <nav class="hidden lg:flex gap-8 items-center text-xs uppercase tracking-[0.2em] font-semibold">
+            <a class="hover:text-muted-sage transition-colors duration-300" href="kitchen.html">KITCHEN</a>
+            <a class="hover:text-muted-sage transition-colors duration-300" href="living.html">LIVING</a>
+            <a class="hover:text-muted-sage transition-colors duration-300" href="bath.html">BATH</a>
+            <a class="hover:text-muted-sage transition-colors duration-300" href="projects.html">PROJECTS</a>
+            <a class="hover:text-muted-sage transition-colors duration-300" href="narrative.html">NARRATIVE</a>
+            <a class="hover:text-muted-sage transition-colors duration-300" href="contact.html">CONTACT</a>
+        </nav>
+        
+        <!-- Right Side Mobile Placeholder -->
+        <div class="w-12 lg:hidden"></div>
+    </header>
+
+    <!-- Fullscreen Menu Overlay -->
+    <nav id="nav-drawer" class="fixed inset-0 z-[60] w-screen h-screen bg-gallery-white flex flex-col justify-center items-start px-margin-mobile md:px-margin-desktop opacity-0 pointer-events-none transition-opacity duration-500">
+        <div class="absolute top-0 left-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 md:h-20 border-b border-obsidian-gray/10">
+            <div id="close-menu" class="flex items-center cursor-pointer hover:opacity-70 transition-opacity duration-500" role="button" aria-label="Close Navigation">
+                <span class="material-symbols-outlined text-monolith-black mr-2">close</span>
+                <span class="text-xs uppercase tracking-[0.2em] font-semibold text-monolith-black hidden sm:inline-block">CLOSE</span>
+            </div>
+            <span class="absolute left-1/2 -translate-x-1/2 text-lg md:text-xl tracking-widest font-bold text-monolith-black uppercase">BINOVA INTERIO</span>
+            <div class="w-12"></div>
+        </div>
+        
+        <div class="flex flex-col gap-6 md:gap-8 w-full max-w-lg mt-12 pl-4">
+            <span class="text-xs text-outline uppercase tracking-[0.2em] mb-4">COLLECTIONS</span>
+            
+            <a class="drawer-link flex items-center gap-6 group" href="kitchen.html">
+                <span class="material-symbols-outlined text-3xl text-outline group-hover:text-monolith-black transition-colors duration-300">countertops</span>
+                <span class="text-2xl md:text-4xl font-light text-outline group-hover:text-monolith-black group-hover:opacity-100 transition-all duration-300 group-hover:pl-4">Kitchen Systems</span>
+            </a>
+            
+            <a class="drawer-link flex items-center gap-6 group" href="living.html">
+                <span class="material-symbols-outlined text-3xl text-outline group-hover:text-monolith-black transition-colors duration-300">weekend</span>
+                <span class="text-2xl md:text-4xl font-light text-outline group-hover:text-monolith-black group-hover:opacity-100 transition-all duration-300 group-hover:pl-4">Living Concepts</span>
+            </a>
+            
+            <a class="drawer-link flex items-center gap-6 group" href="bath.html">
+                <span class="material-symbols-outlined text-3xl text-outline group-hover:text-monolith-black transition-colors duration-300">bathtub</span>
+                <span class="text-2xl md:text-4xl font-light text-outline group-hover:text-monolith-black group-hover:opacity-100 transition-all duration-300 group-hover:pl-4">Bath Environments</span>
+            </a>
+            
+            <a class="drawer-link flex items-center gap-6 group" href="projects.html">
+                <span class="material-symbols-outlined text-3xl text-outline group-hover:text-monolith-black transition-colors duration-300">architecture</span>
+                <span class="text-2xl md:text-4xl font-light text-outline group-hover:text-monolith-black group-hover:opacity-100 transition-all duration-300 group-hover:pl-4">Project Archive</span>
+            </a>
+            
+            <a class="drawer-link flex items-center gap-6 group" href="narrative.html">
+                <span class="material-symbols-outlined text-3xl text-outline group-hover:text-monolith-black transition-colors duration-300">auto_stories</span>
+                <span class="text-2xl md:text-4xl font-light text-outline group-hover:text-monolith-black group-hover:opacity-100 transition-all duration-300 group-hover:pl-4">Our Narrative</span>
+            </a>
+            
+            <a class="drawer-link flex items-center gap-6 group" href="contact.html">
+                <span class="material-symbols-outlined text-3xl text-outline group-hover:text-monolith-black transition-colors duration-300">contact_mail</span>
+                <span class="text-2xl md:text-4xl font-light text-outline group-hover:text-monolith-black group-hover:opacity-100 transition-all duration-300 group-hover:pl-4">Inquiries</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative h-screen w-full flex items-end justify-center overflow-hidden">
+            <!-- WebGL shader canvas runs in background -->
+            <div class="absolute inset-0 z-0 bg-monolith-black">
+                <canvas id="hero-shader-canvas" class="absolute inset-0 w-full h-full block opacity-70"></canvas>
+            </div>
+            
+            <!-- Hero Image Overlay (Slightly transparent for WebGL blend) -->
+            <div class="absolute inset-0 z-10 opacity-40 mix-blend-luminosity">
+                <div class="w-full h-full bg-cover bg-center" style="background-image: url('assets/images/crafted_wood_living.jpg')"></div>
+            </div>
+
+            <!-- Dark Overlay for Contrast -->
+            <div class="absolute inset-0 z-20 bg-gradient-to-t from-monolith-black/70 via-monolith-black/20 to-transparent"></div>
+
+            <!-- Hero Content -->
+            <div class="relative z-30 text-center pb-24 px-margin-mobile reveal-up active">
+                <span class="text-xs uppercase tracking-[0.4em] text-gallery-white/80 block mb-4">TIMELESS SPACES</span>
+                <h1 class="text-4xl md:text-7xl font-extralight text-gallery-white md:max-w-4xl mx-auto mb-6 tracking-tight leading-tight">DESIGNED FOR LIVING. CRAFTED FOR LIFE.</h1>
+                <p class="text-xs uppercase tracking-[0.3em] text-gallery-white/70">Bespoke residential &amp; interior architecture tailored for contemporary Indian living.</p>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce text-gallery-white/60 z-30">
+                <span class="material-symbols-outlined">expand_more</span>
+            </div>
+        </section>
+
+        <!-- Philosophical Statement -->
+        <section class="py-section-gap-mobile md:py-section-gap px-margin-mobile md:px-margin-desktop bg-gallery-white">
+            <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+                <div class="md:col-start-2 md:col-span-10 reveal-up">
+                    <h2 class="text-xs uppercase tracking-[0.3em] text-outline mb-10">THE PHILOSOPHY</h2>
+                    <p class="text-3xl md:text-5xl font-light text-monolith-black leading-snug">At Binova Interio, we design homes that balance quiet modern aesthetics with effortless daily living. Every corner is shaped to celebrate natural light, honest materials, and intuitive space planning.</p>
+                    <div class="mt-16 border-t border-monolith-black/10 pt-16 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                        <p class="text-on-surface-variant text-base md:text-lg leading-relaxed">
+                            We believe true luxury isn't about excess—it’s about clarity. From climate-conscious material palettes to clutter-free modular architecture, our spaces are engineered to age gracefully with your family.
+                        </p>
+                        <div class="flex md:justify-end items-end mt-8 md:mt-0">
+                            <a class="text-xs uppercase tracking-widest border-b border-monolith-black pb-2 hover:opacity-50 transition-all duration-300 font-semibold" href="narrative.html">OUR DESIGN APPROACH &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Bento Grid -->
+        <section class="pb-section-gap px-margin-mobile md:px-margin-desktop bg-gallery-white">
+            <div class="max-w-7xl mx-auto bento-grid">
+                <!-- Kitchen Systems (Large Tile) -->
+                <div class="md:col-span-8 image-container-zoom h-[400px] md:h-[600px] reveal-up">
+                    <img loading="lazy" class="w-full h-full object-cover image-zoom" alt="Binova Modern Kitchen and Living Joinery" src="assets/images/crafted_wood_living.jpg">
+                    <div class="absolute inset-0 bg-monolith-black/25 hover:bg-monolith-black/15 transition-colors duration-500 z-10"></div>
+                    <a href="kitchen.html" class="absolute bottom-8 left-8 text-gallery-white z-20">
+                        <span class="text-xs uppercase tracking-widest mb-2 block opacity-80">01 / Systems</span>
+                        <h3 class="text-2xl md:text-3xl font-light tracking-wide hover:underline">KITCHEN SYSTEMS</h3>
+                    </a>
+                </div>
+                
+                <!-- Living Concepts (Small Tile) -->
+                <div class="md:col-span-4 image-container-zoom h-[400px] md:h-[600px] reveal-up">
+                    <img loading="lazy" class="w-full h-full object-cover image-zoom" alt="Binova Modern Living Room and Screen Partitions" src="assets/images/spatial_partitions_dividers.jpg">
+                    <div class="absolute inset-0 bg-monolith-black/25 hover:bg-monolith-black/15 transition-colors duration-500 z-10"></div>
+                    <a href="living.html" class="absolute bottom-8 left-8 text-gallery-white z-20">
+                        <span class="text-xs uppercase tracking-widest mb-2 block opacity-80">02 / Volumes</span>
+                        <h3 class="text-2xl md:text-3xl font-light tracking-wide hover:underline">LIVING CONCEPTS</h3>
+                    </a>
+                </div>
+
+                <!-- Bath Environments (Medium Tile) -->
+                <div class="md:col-span-5 image-container-zoom h-[400px] md:h-[500px] reveal-up">
+                    <img loading="lazy" class="w-full h-full object-cover image-zoom" alt="Binova Luxury Master Suite" src="assets/images/master_bedroom_alcove.jpg">
+                    <div class="absolute inset-0 bg-monolith-black/25 hover:bg-monolith-black/15 transition-colors duration-500 z-10"></div>
+                    <a href="bath.html" class="absolute bottom-8 left-8 text-gallery-white z-20">
+                        <span class="text-xs uppercase tracking-widest mb-2 block opacity-80">03 / Wellness</span>
+                        <h3 class="text-2xl md:text-3xl font-light tracking-wide hover:underline">BATH ENVIRONMENTS</h3>
+                    </a>
+                </div>
+
+                <!-- Project Archive (Medium Tile) -->
+                <div class="md:col-span-7 image-container-zoom h-[400px] md:h-[500px] reveal-up">
+                    <img loading="lazy" class="w-full h-full object-cover image-zoom" alt="Binova Executive Workspace Archive" src="assets/images/architectural_office_study.jpg">
+                    <div class="absolute inset-0 bg-monolith-black/25 hover:bg-monolith-black/15 transition-colors duration-500 z-10"></div>
+                    <a href="projects.html" class="absolute bottom-8 left-8 text-gallery-white z-20">
+                        <span class="text-xs uppercase tracking-widest mb-2 block opacity-80">04 / Portfolio</span>
+                        <h3 class="text-2xl md:text-3xl font-light tracking-wide hover:underline">PROJECT ARCHIVE</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Works Section -->
+        <section class="py-section-gap-mobile md:py-section-gap px-margin-mobile md:px-margin-desktop bg-surface cv-auto">
+            <div class="max-w-7xl mx-auto mb-16 reveal-up">
+                <span class="text-xs uppercase tracking-[0.2em] text-outline mb-2 block">Curation</span>
+                <h2 class="text-3xl md:text-5xl font-light text-monolith-black">Selected Works</h2>
+            </div>
+            
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Work 1 -->
+                <article class="flex flex-col gap-4 reveal-up">
+                    <div class="image-container-zoom aspect-[4/5] bg-surface-dim">
+                        <img loading="lazy" alt="Milan Residence Detail" class="w-full h-full object-cover image-zoom" src="assets/images/crafted_wood_living.jpg"/>
+                    </div>
+                    <div class="flex justify-between items-start pt-2">
+                        <div>
+                            <h4 class="text-sm font-semibold text-monolith-black uppercase tracking-wider">Milan Residence</h4>
+                            <p class="text-xs text-outline uppercase tracking-widest mt-1">LIVING SYSTEMS</p>
+                        </div>
+                        <span class="text-xs text-outline font-semibold">01</span>
+                    </div>
+                </article>
+
+                <!-- Work 2 -->
+                <article class="flex flex-col gap-4 reveal-up" style="transition-delay: 150ms;">
+                    <div class="image-container-zoom aspect-[4/5] bg-surface-dim">
+                        <img loading="lazy" alt="Lake Como Villa Living" class="w-full h-full object-cover image-zoom" src="assets/images/spatial_partitions_dividers.jpg"/>
+                    </div>
+                    <div class="flex justify-between items-start pt-2">
+                        <div>
+                            <h4 class="text-sm font-semibold text-monolith-black uppercase tracking-wider">Lake Como Villa</h4>
+                            <p class="text-xs text-outline uppercase tracking-widest mt-1">SPATIAL DIVIDERS &amp; JOINERY</p>
+                        </div>
+                        <span class="text-xs text-outline font-semibold">02</span>
+                    </div>
+                </article>
+
+                <!-- Work 3 -->
+                <article class="flex flex-col gap-4 reveal-up" style="transition-delay: 300ms;">
+                    <div class="image-container-zoom aspect-[4/5] bg-surface-dim">
+                        <img loading="lazy" alt="Rome Penthouse Voids" class="w-full h-full object-cover image-zoom" src="assets/images/minimalist_bedroom_suite.jpg"/>
+                    </div>
+                    <div class="flex justify-between items-start pt-2">
+                        <div>
+                            <h4 class="text-sm font-semibold text-monolith-black uppercase tracking-wider">Rome Penthouse</h4>
+                            <p class="text-xs text-outline uppercase tracking-widest mt-1">MASTER SUITE &amp; VOIDS</p>
+                        </div>
+                        <span class="text-xs text-outline font-semibold">03</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Narrative Section -->
+        <section class="bg-monolith-black text-gallery-white py-section-gap-mobile md:py-section-gap px-margin-mobile md:px-margin-desktop overflow-hidden cv-auto">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+                <div class="reveal-up">
+                    <h2 class="text-xs uppercase tracking-[0.3em] mb-10 text-outline-variant">OUR PROCESS</h2>
+                    <h3 class="text-3xl md:text-5xl font-light mb-8 leading-tight">Meticulous Planning. Seamless Delivery.</h3>
+                    <p class="text-base md:text-lg text-outline-variant mb-12 max-w-lg leading-relaxed">
+                        Great interiors start with understanding routines and finish with spotless execution. We manage everything from spatial blueprints to on-site carpentry with uncompromising quality.
+                    </p>
+                    
+                    <div class="space-y-8 max-w-lg">
+                        <div class="flex items-start gap-6 border-b border-gallery-white/10 pb-8">
+                            <span class="text-xs font-semibold text-muted-sage uppercase mt-1">01</span>
+                            <div>
+                                <h4 class="text-xl font-light mb-2">Spatial Flow &amp; Planning</h4>
+                                <p class="text-outline-variant text-sm md:text-base leading-relaxed">Mapping room proportions, light entry, and day-to-day movement to craft functional, open layouts.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-6 border-b border-gallery-white/10 pb-8">
+                            <span class="text-xs font-semibold text-muted-sage uppercase mt-1">02</span>
+                            <div>
+                                <h4 class="text-xl font-light mb-2">Material &amp; Finish Curation</h4>
+                                <p class="text-outline-variant text-sm md:text-base leading-relaxed">Sourcing enduring natural stones, treated hardwoods, and tactile fabrics tested for Indian climate conditions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mt-16 lg:mt-0 reveal-up" style="transition-delay: 200ms;">
+                    <div class="aspect-[4/5] overflow-hidden bg-obsidian-gray">
+                        <img loading="lazy" class="w-full h-full object-cover" alt="Detail of executive desk and architectural study" src="assets/images/architectural_office_study.jpg">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-gallery-white text-monolith-black p-8 max-w-sm hidden md:block border border-outline-variant/30">
+                        <p class="text-lg italic font-light">"A home should feel effortless to walk through, quiet to rest in, and built to withstand real daily life."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic CTA -->
+        <section class="py-section-gap-mobile md:py-section-gap px-margin-mobile md:px-margin-desktop bg-gallery-white text-center cv-auto">
+            <div class="max-w-2xl mx-auto reveal-up">
+                <span class="text-xs uppercase tracking-[0.4em] text-outline mb-10 block">THE INQUIRY</span>
+                <h2 class="text-4xl md:text-6xl font-extralight mb-12 text-monolith-black tracking-tight">START YOUR VISION</h2>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a class="w-full sm:w-auto px-10 py-5 bg-monolith-black text-gallery-white text-xs uppercase tracking-widest hover:bg-muted-sage transition-colors duration-300 font-semibold" href="contact.html">BOOK CONSULTATION</a>
+                    <a class="w-full sm:w-auto px-10 py-5 border border-monolith-black text-monolith-black text-xs uppercase tracking-widest hover:bg-monolith-black hover:text-gallery-white transition-all duration-300 font-semibold" href="contact.html">REQUEST CATALOGUE</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-monolith-black text-gallery-white pt-24 pb-12 border-t border-obsidian-gray">
+        <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter w-full">
+                <!-- Branding -->
+                <div class="flex flex-col gap-6">
+                    <div class="text-xl font-bold uppercase tracking-widest text-gallery-white">BINOVA INTERIO</div>
+                </div>
+                
+                <!-- Collections -->
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-xs uppercase tracking-widest text-gallery-white font-semibold mb-2">COLLECTIONS</h4>
+                    <a class="text-outline-variant hover:text-gallery-white transition-colors duration-300 text-xs uppercase tracking-widest" href="kitchen.html">Kitchen Systems</a>
+                    <a class="text-outline-variant hover:text-gallery-white transition-colors duration-300 text-xs uppercase tracking-widest" href="living.html">Living Concepts</a>
+                    <a class="text-outline-variant hover:text-gallery-white transition-colors duration-300 text-xs uppercase tracking-widest" href="bath.html">Bath Environments</a>
+                </div>
+
+                <!-- Company -->
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-xs uppercase tracking-widest text-gallery-white font-semibold mb-2">COMPANY</h4>
+                    <a class="text-outline-variant hover:text-gallery-white transition-colors duration-300 text-xs uppercase tracking-widest" href="narrative.html">History</a>
+                    <a class="text-outline-variant hover:text-gallery-white transition-colors duration-300 text-xs uppercase tracking-widest" href="narrative.html">Innovation</a>
+                    <a class="text-outline-variant hover:text-gallery-white transition-colors duration-300 text-xs uppercase tracking-widest" href="contact.html">Contacts</a>
+                </div>
+
+                <!-- Connect / Address -->
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-xs uppercase tracking-widest text-gallery-white font-semibold mb-2">STUDIO</h4>
+                    <p class="text-outline-variant text-xs leading-relaxed uppercase tracking-wider">
+                        # 108, Basement Suvirath Mansion,<br>
+                        Lalbagh Fort Road, Bengaluru-560 004
+                    </p>
+                    <p class="text-outline-variant text-xs leading-relaxed mt-2">
+                        T: 9113206625, 080 43726586<br>
+                        E: <a href="mailto:binovainterio@gmail.com" class="hover:text-gallery-white">binovainterio@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-20 border-t border-gallery-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs tracking-widest text-outline-variant">© 2026 BINOVA INTERIO. ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-6 text-xs uppercase tracking-widest">
+                    <a class="text-outline-variant hover:text-gallery-white transition-colors" href="#">Instagram</a>
+                    <a class="text-outline-variant hover:text-gallery-white transition-colors" href="#">LinkedIn</a>
+                    <a class="text-outline-variant hover:text-gallery-white transition-colors" href="#">Pinterest</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full z-[200] bg-gallery-white border-t border-surface-container-highest p-8 translate-y-full transition-transform duration-500 shadow-2xl">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 px-4">
+            <div class="max-w-3xl">
+                <h5 class="text-xs uppercase tracking-[0.2em] font-semibold mb-2 text-monolith-black">PRIVACY & COOKIES</h5>
+                <p class="text-on-surface-variant text-sm leading-relaxed">We use technological solutions to ensure the site functions correctly and to analyze traffic. By clicking "ACCEPT" you consent to all cookies. <a class="underline hover:text-monolith-black" href="#">Cookie Policy</a>.</p>
+            </div>
+            <div class="flex gap-4 shrink-0 w-full md:w-auto">
+                <button class="flex-1 md:flex-initial px-8 py-3 bg-monolith-black text-gallery-white text-xs uppercase tracking-widest font-semibold hover:opacity-80 transition-opacity" onclick="acceptCookies()">ACCEPT</button>
+                <button class="flex-1 md:flex-initial px-8 py-3 border border-monolith-black text-monolith-black text-xs uppercase tracking-widest font-semibold hover:bg-monolith-black hover:text-gallery-white transition-all" onclick="rejectCookies()">REJECT</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Start background shader canvas
+        window.initHeroShader('hero-shader-canvas');
+    </script>
+</body>
+</html>

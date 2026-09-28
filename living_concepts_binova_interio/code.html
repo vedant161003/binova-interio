@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Binova Interio - Living Concepts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#474747",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "concrete-light": "#F2F2F2",
+                        "obsidian-gray": "#1A1A1A",
+                        "on-surface-variant": "#4c4546",
+                        "surface": "#f9f9f9",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "inverse-surface": "#303030",
+                        "secondary-container": "#d1e6c3",
+                        "outline-variant": "#cfc4c5",
+                        "on-background": "#1b1b1b",
+                        "tertiary-container": "#1b1b1b",
+                        "secondary-fixed": "#d4e9c6",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f3f3",
+                        "primary-container": "#1b1b1b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#101f09",
+                        "on-tertiary-container": "#848484",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#848484",
+                        "surface-tint": "#5e5e5e",
+                        "on-secondary-container": "#56684c",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed": "#e2e2e2",
+                        "monolith-black": "#000000",
+                        "secondary-fixed-dim": "#b8cdab",
+                        "background": "#f9f9f9",
+                        "outline": "#7e7576",
+                        "on-surface": "#1b1b1b",
+                        "secondary": "#516448",
+                        "on-secondary-fixed-variant": "#3a4c32",
+                        "surface-bright": "#f9f9f9",
+                        "primary": "#000000",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "inverse-primary": "#c6c6c6",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "gallery-white": "#FFFFFF",
+                        "tertiary": "#000000",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dadada",
+                        "muted-sage": "#718466"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "24px",
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "display-xl": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "display-xl": ["80px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "200" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #1b1b1b;
+        }
+        .architectural-grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: 32px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md overflow-x-hidden selection:bg-monolith-black selection:text-gallery-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-gallery-white/90 dark:bg-obsidian-gray/90 backdrop-blur-md border-b border-outline-variant/30 flat no shadows">
+<div class="flex justify-between items-center w-full px-margin-desktop py-unit mx-auto">
+<div class="font-headline-md text-headline-md tracking-tighter font-bold text-monolith-black dark:text-gallery-white">
+                Binova Interio
+            </div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex space-x-8 font-label-sm text-label-sm uppercase tracking-widest">
+<a class="text-on-surface-variant dark:text-outline-variant pb-1 hover:text-monolith-black dark:hover:text-gallery-white transition-colors duration-300 opacity-100 hover:opacity-80 transition-opacity" href="#">Kitchen</a>
+<a class="text-monolith-black dark:text-gallery-white border-b border-monolith-black dark:border-gallery-white pb-1 opacity-100 hover:opacity-80 transition-opacity" href="#">Living</a>
+<a class="text-on-surface-variant dark:text-outline-variant pb-1 hover:text-monolith-black dark:hover:text-gallery-white transition-colors duration-300 opacity-100 hover:opacity-80 transition-opacity" href="#">Bath</a>
+<a class="text-on-surface-variant dark:text-outline-variant pb-1 hover:text-monolith-black dark:hover:text-gallery-white transition-colors duration-300 opacity-100 hover:opacity-80 transition-opacity" href="#">Contact</a>
+</div>
+<!-- Mobile Menu Trigger -->
+<div class="md:hidden flex items-center">
+<button class="p-2">
+<span class="material-symbols-outlined text-monolith-black text-2xl" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="w-full min-h-screen pt-[100px] flex flex-col justify-center px-margin-mobile md:px-margin-desktop mb-section-gap relative">
+<div class="architectural-grid h-full w-full max-w-[1920px] mx-auto items-center">
+<!-- Typography Vol -->
+<div class="col-span-12 md:col-span-5 flex flex-col justify-center z-10 md:pr-12">
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-muted-sage mb-6 border-l border-muted-sage pl-4">Living Concepts</p>
+<h1 class="font-display-xl text-display-xl md:text-display-xl text-monolith-black leading-none mb-8">
+                    Domestic<br/>Intimacy.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                    Architectural rigor applied to the living space. A continuous flow of volumes, where shelving and media units integrate seamlessly into the structural narrative of the home.
+                </p>
+<div class="mt-12">
+<button class="bg-monolith-black text-gallery-white px-8 py-4 font-label-sm text-label-sm uppercase tracking-widest hover:bg-muted-sage transition-colors duration-300 border border-monolith-black rounded-none">
+                        Explore Collections
+                     </button>
+</div>
+</div>
+<!-- Image Vol -->
+<div class="col-span-12 md:col-span-7 h-[60vh] md:h-[85vh] w-full mt-12 md:mt-0 relative group overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-high animate-pulse z-0"></div>
+<img alt="Domestic Intimacy Living Space" class="w-full h-full object-cover relative z-10 transition-transform duration-1000 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida/AP1WRLsXf0H15QTThLd2NvyNMAobvvlQZUKbG2m7TI4sZJBWZE69qJXbfYaYVIjvCDiO6M8SvB2ViSLcT0RXgPK1JZvs2VIW9uAU11kt7Sv1fpy5sgTbGWEaxfaLpYln1wSRcp6CSRAzOVt4WUGAIK77NFqvC7mQepI4ny2XQ70naxwWx1CRIAS8sLHerlQPoEW8k-k29Iciv1d7pGSmgimZbVK00ALUD9-BBXRA0SVK8NIxkTk59b1YxpoKjg8"/>
+<div class="absolute bottom-0 right-0 bg-monolith-black p-6 z-20">
+<span class="font-label-sm text-label-sm text-gallery-white uppercase tracking-widest">Bluna Living System</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Sections -->
+<main class="w-full max-w-[1920px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-section-gap pb-section-gap">
+<!-- Spatial Flow -->
+<section class="architectural-grid items-center">
+<div class="col-span-12 md:col-span-6 h-[50vh] md:h-[70vh] bg-surface-container relative">
+<div class="w-full h-full bg-cover bg-center absolute inset-0" data-alt="A highly detailed architectural visualization of a minimalist, light-filled living room featuring continuous spatial flow. The scene is dominated by a monolithic grey wall system that extends into the next room without interruption. High-key natural light pours in through floor-to-ceiling windows, creating sharp geometric shadows on a polished concrete floor. The aesthetic is strictly minimalist, employing a pure palette of concrete grey, gallery white, and obsidian black. The mood is serene, vast, and structurally pure." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJOgaspcxy4ZTPoYiKHqgLnvgSWpTUHX8U5xHw9w9b-SMZJLNcBGsUh9lSQb30RICyNMl_cTsa-IAqnZkGsPqzhsHm_EATXqAbgj4jU02SYvwWvigDYrfMxN0_sYmutVs9CUZO3Jkugc1yFjsXwyRc6nRni2yDECVANoHyuDJcurgSMKEprobvpFBzkv6WHUsOSBtOqhKftnrAtiU8EtBQjjZF9gaJ2OWVI2_Nj8R1ZcavyD1HE-NH')"></div>
+</div>
+<div class="col-span-12 md:col-span-5 md:col-start-8 py-12 md:py-0">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-monolith-black mb-6">Spatial Flow</h2>
+<div class="w-12 h-[1px] bg-monolith-black mb-6"></div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    We approach the living area not as a container for objects, but as a volume of continuous space. Our wall systems are designed to eliminate visual barriers, extending architectural lines and fostering a sense of expansive calm. The absence of noise allows the geometry of the room to breathe.
+                </p>
+</div>
+</section>
+<!-- Integrated Systems -->
+<section class="architectural-grid items-center">
+<div class="col-span-12 md:col-span-5 py-12 md:py-0 order-2 md:order-1">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-monolith-black mb-6">Integrated Systems</h2>
+<div class="w-12 h-[1px] bg-monolith-black mb-6"></div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                    Technology and storage should serve the space, not dominate it. TV units and shelving are conceived as intrinsic architectural elements, flush with walls or acting as structural dividers. Precision engineering ensures effortless operation hidden behind monolithic facades.
+                </p>
+<ul class="space-y-4 font-label-sm text-label-sm uppercase tracking-widest text-monolith-black">
+<li class="flex items-center gap-4 border-b border-outline-variant/30 pb-4">
+<span class="material-symbols-outlined text-muted-sage" data-icon="grid_view">grid_view</span>
+                        Modular Wall Units
+                    </li>
+<li class="flex items-center gap-4 border-b border-outline-variant/30 pb-4">
+<span class="material-symbols-outlined text-muted-sage" data-icon="tv_gen">tv_gen</span>
+                        Concealed Media Centers
+                    </li>
+<li class="flex items-center gap-4 border-b border-outline-variant/30 pb-4">
+<span class="material-symbols-outlined text-muted-sage" data-icon="shelves">shelves</span>
+                        Suspended Shelving
+                    </li>
+</ul>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7 h-[50vh] md:h-[70vh] bg-surface-container relative order-1 md:order-2">
+<img alt="Hily Legno Integrated System" class="w-full h-full object-cover relative z-10" loading="lazy" src="https://lh3.googleusercontent.com/aida/AP1WRLtQLGxg5UmHYAYOuLXRCWGQzwIvU6Mek7ywKXW19rS5ibuedcYnhRzAIILbRppKThoqyTPMZET3mk-X4dDHEn2IYNJFcWR3FM4B2t0P9dmc-67SbzqfQkV7ejrFfATSNafj4yf1qg6v7VPj6EZTDKROf98wjTvi_muw5aMXfWuciP3BrHxLAMm3pX9rSClH1amNvHMVil1_I_jTO6Q5wrLzoDG_HFtnQ_TzQjSsy0kPKUejO8gQcKA7Qg"/>
+</div>
+</section>
+<!-- Curated Comfort -->
+<section class="mt-section-gap text-center max-w-4xl mx-auto">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-monolith-black mb-8">Curated Comfort</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                 Beyond pure geometry, the living space demands a tactile response. We select materials—matte lacquers, textured woods, and cool stones—that offer a restrained but palpable luxury. Comfort is achieved through clarity.
+             </p>
+<div class="architectural-grid mt-16 text-left">
+<div class="col-span-12 md:col-span-4 border-t border-monolith-black pt-6">
+<span class="font-label-sm text-label-sm uppercase text-muted-sage mb-2 block">Materiality</span>
+<h3 class="font-headline-md text-headline-md text-monolith-black mb-4">Tactile Surfaces</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Honest materials treated with absolute precision to reveal their intrinsic character.</p>
+</div>
+<div class="col-span-12 md:col-span-4 border-t border-monolith-black pt-6 md:mt-0 mt-8">
+<span class="font-label-sm text-label-sm uppercase text-muted-sage mb-2 block">Proportion</span>
+<h3 class="font-headline-md text-headline-md text-monolith-black mb-4">Golden Ratio</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Every dimension is calculated to establish perfect visual harmony and balance within the room.</p>
+</div>
+<div class="col-span-12 md:col-span-4 border-t border-monolith-black pt-6 md:mt-0 mt-8">
+<span class="font-label-sm text-label-sm uppercase text-muted-sage mb-2 block">Light</span>
+<h3 class="font-headline-md text-headline-md text-monolith-black mb-4">Shadow Play</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Volumes are designed to interact with natural and artificial light, defining depth without ornamentation.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-monolith-black dark:bg-monolith-black flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-section-gap w-full bg-monolith-black max-w-[1920px] mx-auto">
+<div class="col-span-12 md:col-span-4 flex flex-col justify-between">
+<div class="font-headline-lg text-headline-lg text-gallery-white mb-8">
+                    Binova Interio
+                </div>
+<div class="font-body-md text-body-md text-gallery-white dark:text-gallery-white mt-auto">
+                    © 2024 Binova Interio. All rights reserved. Architectural Purity.
+                </div>
+</div>
+<div class="col-span-12 md:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8 pt-4 md:pt-0 border-t border-outline-variant/20 md:border-t-0">
+<div class="flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-outline-variant hover:text-muted-sage transition-colors duration-500 transition-all duration-500 ease-in-out" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-outline-variant hover:text-muted-sage transition-colors duration-500 transition-all duration-500 ease-in-out" href="#">LinkedIn</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-outline-variant hover:text-muted-sage transition-colors duration-500 transition-all duration-500 ease-in-out" href="#">Pinterest</a>
+<a class="font-body-md text-body-md text-outline-variant hover:text-muted-sage transition-colors duration-500 transition-all duration-500 ease-in-out" href="#">Newsletter</a>
+</div>
+<div class="flex flex-col space-y-4 col-span-2 md:col-span-1 mt-8 md:mt-0">
+<a class="font-body-md text-body-md text-outline-variant hover:text-muted-sage transition-colors duration-500 transition-all duration-500 ease-in-out" href="#">Privacy</a>
+<a class="font-body-md text-body-md text-outline-variant hover:text-muted-sage transition-colors duration-500 transition-all duration-500 ease-in-out" href="#">Terms</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

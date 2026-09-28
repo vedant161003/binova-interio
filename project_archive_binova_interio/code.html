@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Binova Interio - Project Archive</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-dim": "#dadada",
+                        "on-secondary-fixed": "#101f09",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#848484",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#d1e6c3",
+                        "primary-container": "#1b1b1b",
+                        "outline-variant": "#cfc4c5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "primary": "#000000",
+                        "on-background": "#1b1b1b",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary": "#000000",
+                        "inverse-primary": "#c6c6c6",
+                        "primary-fixed": "#e2e2e2",
+                        "on-secondary-container": "#56684c",
+                        "obsidian-gray": "#1A1A1A",
+                        "on-surface-variant": "#4c4546",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "tertiary-container": "#1b1b1b",
+                        "inverse-surface": "#303030",
+                        "muted-sage": "#718466",
+                        "secondary": "#516448",
+                        "on-surface": "#1b1b1b",
+                        "surface-container-high": "#e8e8e8",
+                        "monolith-black": "#000000",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "on-primary-fixed": "#1b1b1b",
+                        "background": "#f9f9f9",
+                        "gallery-white": "#FFFFFF",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-primary-container": "#848484",
+                        "surface-container-highest": "#e2e2e2",
+                        "concrete-light": "#F2F2F2",
+                        "outline": "#7e7576",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#3a4c32",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "surface-tint": "#5e5e5e",
+                        "secondary-fixed-dim": "#b8cdab",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "secondary-fixed": "#d4e9c6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "160px",
+                        "unit": "8px",
+                        "gutter": "32px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["80px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "200" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem; /* gutter */
+        }
+        
+        .item-large {
+            grid-column: span 12;
+        }
+        @media (min-width: 768px) {
+            .item-large { grid-column: span 8; }
+            .item-small { grid-column: span 4; }
+            .item-half { grid-column: span 6; }
+        }
+        
+        .hover-trigger .hover-target {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-trigger:hover .hover-target {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .image-zoom {
+            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        
+        .hover-trigger:hover .image-zoom {
+            transform: scale(1.05);
+        }
+        
+        .reveal-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-monolith-black selection:text-gallery-white">
+<!-- TopNavBar -->
+<nav class="bg-gallery-white dark:bg-monolith-black w-full top-0 sticky z-50 border-b border-outline-variant dark:border-obsidian-gray">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-full mx-auto">
+<a class="cursor-pointer transition-all duration-300 ease-in-out hover:opacity-70" href="#">
+<img alt="BINOVA INTERIO" class="h-8 md:h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRI-8FrzbgUTZi4WiBzmGMucKWi09tVhzXMlysdJ6irhfzdePfmMOcS_4k6ikYxuCFQYDD28ODuy9FIoYg6NkdrET5GQFxxn_VOpo3Qw_clsi58_5GUrn1WuMPK6IxyqIZr8ba6FpK4XFC6S5_jQTsm3G-6MPJMrkj9IVKkZrcVgwiZ7maaPtKpjRKTOM7n2VLCtc6xJBZAzNpaENDmt3f1M0DFPEzdks-eAbf3Q6AXpmuX17suypqqq_SQtCKflSYCg"/>
+</a>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-primary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors cursor-pointer uppercase" href="#">KITCHEN</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-primary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors cursor-pointer uppercase" href="#">LIVING</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-primary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors cursor-pointer uppercase" href="#">BATH</a>
+<a class="font-label-sm text-label-sm text-primary dark:text-on-primary border-b border-primary dark:border-on-primary pb-1 cursor-pointer uppercase" href="#">PROJECTS</a>
+</div>
+<button class="md:hidden text-primary hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative w-full h-[70vh] min-h-[600px] flex items-end px-margin-mobile md:px-margin-desktop pb-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Architectural background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLs9fra824p9lly4POGANGbi7TAtym8WYYXJ3A4KhVdGc-u7ijHI-WUiYaAGprwRho0RO6jJiL2hbTW4gYPAvB0EUB7wDqYPiUk8C92D0EzlT1ILu0j3D_gNdPRN2YUnwEthcw9OByytVAH-esPQc3_nUuy5HNYXZooHw5R2OnmStUHmkbIAnhtNQYGmVs9OY5n5PZjuitZIIx0XtEcuwhpw_9K52m-TzY7sHOXAiHeTMxjxlVh1-qq8OG0"/>
+<div class="absolute inset-0 bg-monolith-black/40"></div>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto">
+<div class="w-full md:w-2/3">
+<h1 class="font-display-xl text-headline-lg-mobile md:text-display-xl text-gallery-white mb-6 tracking-tighter">PROJECT ARCHIVE</h1>
+<p class="font-body-lg text-body-lg text-surface-dim max-w-2xl">A definitive collection of architectural milestones and interior narratives. Exploring spatial quality, material honesty, and minimalist precision.</p>
+</div>
+</div>
+</section>
+<!-- Filter/Navigation -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-12 border-b border-outline-variant/30 sticky top-[97px] bg-background/90 backdrop-blur-md z-40">
+<div class="max-w-7xl mx-auto flex flex-wrap gap-8 items-center justify-center md:justify-start">
+<button class="font-label-sm text-label-sm text-primary border-b border-primary pb-1 tracking-widest uppercase">ALL PROJECTS</button>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase">RESIDENTIAL</button>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase">COMMERCIAL</button>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase">INDUSTRIAL</button>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase">PUBLIC</button>
+</div>
+</section>
+<!-- Portfolio Grid -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="max-w-[1440px] mx-auto bento-grid">
+<!-- Project 1 - Large -->
+<a class="item-large relative h-[600px] overflow-hidden group hover-trigger cursor-pointer bg-surface-container-lowest block" href="#">
+<img alt="Villa Volterra" class="w-full h-full object-cover image-zoom" src="https://lh3.googleusercontent.com/aida/AP1WRLtuJPplXRe-qgiXI6keZcnaI_yCGVTdDnPlBYrZQ__1iHPkMNS8Oh-y9HXmULlh4MEpzW06zWUI7ZZG3sJGPRFvhriNCAS2FGQ8rE5IX4VveyNvrl_oPb9DiGqJSENXZIcdXWlQ77XYoUhN94Hr4hnijYM7oxAaV7t1VAPukXJyNo2uVmdFQOpUdwdKa12oCtaIDTGdN3nJ4DXZj9yhca2h5AUQRfym08eR-RKGgesUoH7f5srVCmwZeWY"/>
+<div class="absolute inset-0 reveal-overlay flex flex-col justify-end p-8 md:p-12">
+<div class="hover-target">
+<p class="font-label-sm text-label-sm text-surface-dim mb-2 uppercase tracking-widest">RESIDENTIAL</p>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-gallery-white mb-2">VILLA VOLTERRA</h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span> TUSCANY, ITALY
+                        </p>
+</div>
+</div>
+</a>
+<!-- Project 2 - Small -->
+<a class="item-small relative h-[600px] overflow-hidden group hover-trigger cursor-pointer bg-surface-container-lowest block" href="#">
+<img alt="Milan Penthouse" class="w-full h-full object-cover image-zoom" src="https://lh3.googleusercontent.com/aida/AP1WRLsYGArpPVV_lcD4hwMw5MKcckncMGW_o5a5FA8ewA4Ol7bE4MC4s2oEs3tgYHLmLwxl2JjCmh4E0xDCg_kswg0l3uwV1e7VVdGuV9T-9it0G-GwXD0LWpOM0ZZScaZhOHKdHYzfdxud7whxM1JOAEiOTuPh6UGg7IF6bKvcomHT5xnar4WCaRZDNxNHF_wIMg_gE8zT1LkLLGpaRVfCbB-H849gvkRIIneaxBEB6-gK2MSjS4KxcohhyQ"/>
+<div class="absolute inset-0 reveal-overlay flex flex-col justify-end p-8">
+<div class="hover-target">
+<p class="font-label-sm text-label-sm text-surface-dim mb-2 uppercase tracking-widest">RESIDENTIAL</p>
+<h2 class="font-headline-md text-headline-md text-gallery-white mb-2">MILAN PENTHOUSE</h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span> MILAN, ITALY
+                        </p>
+</div>
+</div>
+</a>
+<!-- Project 3 - Half -->
+<a class="item-half relative h-[500px] overflow-hidden group hover-trigger cursor-pointer bg-surface-container-lowest block" href="#">
+<img alt="Lake Como Retreat" class="w-full h-full object-cover image-zoom" src="https://lh3.googleusercontent.com/aida/AP1WRLvg9MxEt1ZwKJJAUNKCLTUeiMzFMvm5SV1LuYDU7P-gxSReJ2mD0aZRcej2PaajMvs5usf9Gua7M4-gQMRpDG1DyBVIQJ0OM4M6_IYCAJUKbYaVmYx2Rmv727cdHDyPtbCvbd3rIbcHhQLIQfM-J6oW49TDb0f7lfWaz7SGvN9acCZsOpAKgNXXvxHq_LqszEQh75thx4VuHoreMfhZUbOG19-Ym5fRhMOi00hbrpf_E5_971mkGgmHpHE"/>
+<div class="absolute inset-0 reveal-overlay flex flex-col justify-end p-8">
+<div class="hover-target">
+<p class="font-label-sm text-label-sm text-surface-dim mb-2 uppercase tracking-widest">RESIDENTIAL</p>
+<h2 class="font-headline-md text-headline-md text-gallery-white mb-2">LAKE COMO RETREAT</h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span> LOMBARDY, ITALY
+                        </p>
+</div>
+</div>
+</a>
+<!-- Project 4 - Half -->
+<a class="item-half relative h-[500px] overflow-hidden group hover-trigger cursor-pointer bg-surface-container-lowest block" href="#">
+<img alt="Alpine Chalet" class="w-full h-full object-cover image-zoom" src="https://lh3.googleusercontent.com/aida/AP1WRLsXf0H15QTThLd2NvyNMAobvvlQZUKbG2m7TI4sZJBWZE69qJXbfYaYVIjvCDiO6M8SvB2ViSLcT0RXgPK1JZvs2VIW9uAU11kt7Sv1fpy5sgTbGWEaxfaLpYln1wSRcp6CSRAzOVt4WUGAIK77NFqvC7mQepI4ny2XQ70naxwWx1CRIAS8sLHerlQPoEW8k-k29Iciv1d7pGSmgimZbVK00ALUD9-BBXRA0SVK8NIxkTk59b1YxpoKjg8"/>
+<div class="absolute inset-0 reveal-overlay flex flex-col justify-end p-8">
+<div class="hover-target">
+<p class="font-label-sm text-label-sm text-surface-dim mb-2 uppercase tracking-widest">RESIDENTIAL</p>
+<h2 class="font-headline-md text-headline-md text-gallery-white mb-2">ALPINE CHALET</h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span> CORTINA, ITALY
+                        </p>
+</div>
+</div>
+</a>
+<!-- Project 5 - Small -->
+<a class="item-small relative h-[600px] overflow-hidden group hover-trigger cursor-pointer bg-surface-container-lowest block" href="#">
+<img alt="Venetian Loft" class="w-full h-full object-cover image-zoom" src="https://lh3.googleusercontent.com/aida/AP1WRLtQLGxg5UmHYAYOuLXRCWGQzwIvU6Mek7ywKXW19rS5ibuedcYnhRzAIILbRppKThoqyTPMZET3mk-X4dDHEn2IYNJFcWR3FM4B2t0P9dmc-67SbzqfQkV7ejrFfATSNafj4yf1qg6v7VPj6EZTDKROf98wjTvi_muw5aMXfWuciP3BrHxLAMm3pX9rSClH1amNvHMVil1_I_jTO6Q5wrLzoDG_HFtnQ_TzQjSsy0kPKUejO8gQcKA7Qg"/>
+<div class="absolute inset-0 reveal-overlay flex flex-col justify-end p-8">
+<div class="hover-target">
+<p class="font-label-sm text-label-sm text-surface-dim mb-2 uppercase tracking-widest">RESIDENTIAL</p>
+<h2 class="font-headline-md text-headline-md text-gallery-white mb-2">VENETIAN LOFT</h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span> VENICE, ITALY
+                        </p>
+</div>
+</div>
+</a>
+<!-- Project 6 - Large -->
+<a class="item-large relative h-[600px] overflow-hidden group hover-trigger cursor-pointer bg-surface-container-lowest block" href="#">
+<img alt="Urban Gallery" class="w-full h-full object-cover image-zoom" src="https://lh3.googleusercontent.com/aida/AP1WRLtIHR8z5Hay0AZjPkZgyYUpmq4SckbpTLe6xeAGihfpG2s-bCvkfp-aTXvK4RinMTQ5Kg4qieEgWEck1pemU6HaYvegzj39H5q_u9drQl73H4qOX3e16XrLpkut1P_esGDL9cw91kTIdMOM2NcpTEofcDwetLZHzGoq53I1zmkJzohuiSeoL69sHoIMbsECq9QneoslBayffOC2ilQiLxfgxBj6UkD85sSR0QDFGcYpvxULBc5FEWbuBA"/>
+<div class="absolute inset-0 reveal-overlay flex flex-col justify-end p-8 md:p-12">
+<div class="hover-target">
+<p class="font-label-sm text-label-sm text-surface-dim mb-2 uppercase tracking-widest">COMMERCIAL</p>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-gallery-white mb-2">URBAN GALLERY</h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span> ROME, ITALY
+                        </p>
+</div>
+</div>
+</a>
+<!-- Project 7 - Large -->
+<a class="item-large relative h-[600px] overflow-hidden group hover-trigger cursor-pointer bg-surface-container-lowest block" href="#">
+<img alt="Minimalist Office" class="w-full h-full object-cover image-zoom" src="https://lh3.googleusercontent.com/aida/AP1WRLt89WhKTnlimVV4_sNG_m6DEI-UgrhvfASj32LVH3oixC5HUPTV8wj0uGN_BB1w0t1droFJeZDKwDQwPGpX_YBSy-cgxoYNm5Kx9AQ5m1-g392NT6RhOhXWhUF7wlVI5x4E8fgzAVCqn9LTb9h0paRyxruD6vapzdoGxS2Nk8U_48qWyRqx_DHnK109CrzeMEXhEcc0TGl5PQk8a4t70joiyxT2OpWiThI4WrQyEy4df3AjzI1DezyhKX8"/>
+<div class="absolute inset-0 reveal-overlay flex flex-col justify-end p-8 md:p-12">
+<div class="hover-target">
+<p class="font-label-sm text-label-sm text-surface-dim mb-2 uppercase tracking-widest">COMMERCIAL</p>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-gallery-white mb-2">STUDIO UNO</h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span> TURIN, ITALY
+                        </p>
+</div>
+</div>
+</a>
+<!-- Project 8 - Small -->
+<a class="item-small relative h-[600px] overflow-hidden group hover-trigger cursor-pointer bg-surface-container-lowest block" href="#">
+<div class="w-full h-full bg-surface-container flex items-center justify-center p-8 text-center group-hover:bg-primary transition-colors duration-500">
+<div>
+<span class="material-symbols-outlined text-4xl text-outline mb-4 group-hover:text-gallery-white transition-colors duration-500">arrow_forward</span>
+<h2 class="font-headline-md text-headline-md text-monolith-black group-hover:text-gallery-white transition-colors duration-500">VIEW ALL ARCHIVES</h2>
+</div>
+</div>
+</a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-obsidian-gray w-full mt-section-gap flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 border-t border-outline-variant dark:border-primary-container">
+<div class="mb-6 md:mb-0">
+<span class="font-headline-md text-headline-md text-monolith-black dark:text-gallery-white tracking-widest uppercase">BINOVA INTERIO</span>
+</div>
+<div class="flex flex-col items-center md:items-end space-y-4">
+<div class="flex space-x-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-primary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors opacity-100 hover:opacity-80 uppercase tracking-widest" href="#">LEGAL</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-primary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors opacity-100 hover:opacity-80 uppercase tracking-widest" href="#">PRIVACY</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-primary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors opacity-100 hover:opacity-80 uppercase tracking-widest" href="#">PRESS</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-primary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors opacity-100 hover:opacity-80 uppercase tracking-widest" href="#">CONTACT</a>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant dark:text-primary-fixed-dim uppercase tracking-widest text-center md:text-right">
+                © 2024 BINOVA INTERIO. ALL RIGHTS RESERVED. ITALIAN ARCHITECTURAL EXCELLENCE.
+            </p>
+</div>
+</footer>
+</body></html>
