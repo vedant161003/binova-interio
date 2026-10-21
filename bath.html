@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
@@ -71,8 +76,9 @@
         </div>
 
         <!-- Center: Brand Logo -->
-        <a href="index.html" class="absolute left-1/2 -translate-x-1/2 text-lg md:text-xl tracking-widest font-bold uppercase hover:opacity-80 transition-opacity">
-            BINOVA INTERIO
+        <a href="index.html" class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center hover:opacity-85 transition-opacity py-1" aria-label="Binova Interio Home">
+            <img src="assets/images/logo-light.png" alt="Binova Interio" class="brand-logo-img logo-light" />
+            <img src="assets/images/logo-dark.png" alt="Binova Interio" class="brand-logo-img logo-dark hidden" />
         </a>
 
         <!-- Right Side: Desktop Navbar Links -->
@@ -96,7 +102,7 @@
                 <span class="material-symbols-outlined text-monolith-black mr-2">close</span>
                 <span class="text-xs uppercase tracking-[0.2em] font-semibold text-monolith-black hidden sm:inline-block">CLOSE</span>
             </div>
-            <span class="absolute left-1/2 -translate-x-1/2 text-lg md:text-xl tracking-widest font-bold text-monolith-black uppercase">BINOVA INTERIO</span>
+            <a href="index.html" class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center py-1" aria-label="Binova Interio Home"><img src="assets/images/logo-dark.png" alt="Binova Interio" class="drawer-logo-img" /></a>
             <div class="w-12"></div>
         </div>
         
@@ -269,7 +275,9 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter w-full">
                 <!-- Branding -->
                 <div class="flex flex-col gap-6">
-                    <div class="text-xl font-bold uppercase tracking-widest text-gallery-white">BINOVA INTERIO</div>
+                    <a href="index.html" class="inline-block hover:opacity-85 transition-opacity" aria-label="Binova Interio Home">
+                        <img src="assets/images/logo-light.png" alt="Binova Interio" class="footer-logo-img" />
+                    </a>
                 </div>
                 
                 <!-- Collections -->
