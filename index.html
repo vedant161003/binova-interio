@@ -61,7 +61,37 @@
     </script>
 
     <!-- Custom CSS -->
-    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/main.css?v=2.2" rel="stylesheet">
+
+    <!-- Guaranteed Marquee Running Animation -->
+    <style>
+        .marquee-wrapper {
+            overflow: hidden !important;
+            position: relative !important;
+            width: 100% !important;
+            display: flex !important;
+            user-select: none !important;
+        }
+        .marquee-track {
+            display: flex !important;
+            flex-shrink: 0 !important;
+            width: max-content !important;
+            white-space: nowrap !important;
+            animation: marqueeSlide 30s linear infinite !important;
+            will-change: transform;
+        }
+        .marquee-wrapper:hover .marquee-track {
+            animation-play-state: paused !important;
+        }
+        @keyframes marqueeSlide {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            100% {
+                transform: translate3d(-50%, 0, 0);
+            }
+        }
+    </style>
 </head>
 <body class="bg-gallery-white text-on-surface font-body min-h-screen flex flex-col overflow-x-hidden selection:bg-monolith-black selection:text-gallery-white">
     <a href="#main-content" class="skip-to-content">Skip to content</a>
@@ -435,9 +465,9 @@
                 <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-gallery-white to-transparent z-10"></div>
                 <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-gallery-white to-transparent z-10"></div>
                 
-                <div class="marquee-track flex items-center">
+                <div id="brands-track" class="marquee-track flex items-center shrink-0 w-max">
                     <!-- Brand items (Original) -->
-                    <div class="flex items-center">
+                    <div class="flex items-center shrink-0 min-w-max">
                         <span class="text-lg md:text-2xl font-light tracking-[0.25em] uppercase text-monolith-black/80 px-8 md:px-14 flex items-center gap-8 md:gap-14">Asian Paints <span class="w-1.5 h-1.5 rounded-full bg-[#E52421]/60 inline-block"></span></span>
                         <span class="text-lg md:text-2xl font-light tracking-[0.25em] uppercase text-monolith-black/80 px-8 md:px-14 flex items-center gap-8 md:gap-14">Century Ply <span class="w-1.5 h-1.5 rounded-full bg-[#E52421]/60 inline-block"></span></span>
                         <span class="text-lg md:text-2xl font-light tracking-[0.25em] uppercase text-monolith-black/80 px-8 md:px-14 flex items-center gap-8 md:gap-14">Greenply <span class="w-1.5 h-1.5 rounded-full bg-[#E52421]/60 inline-block"></span></span>
@@ -451,7 +481,7 @@
                     </div>
                     
                     <!-- Brand items (Duplicated for Seamless Infinite Loop) -->
-                    <div class="flex items-center" aria-hidden="true">
+                    <div class="flex items-center shrink-0 min-w-max" aria-hidden="true">
                         <span class="text-lg md:text-2xl font-light tracking-[0.25em] uppercase text-monolith-black/80 px-8 md:px-14 flex items-center gap-8 md:gap-14">Asian Paints <span class="w-1.5 h-1.5 rounded-full bg-[#E52421]/60 inline-block"></span></span>
                         <span class="text-lg md:text-2xl font-light tracking-[0.25em] uppercase text-monolith-black/80 px-8 md:px-14 flex items-center gap-8 md:gap-14">Century Ply <span class="w-1.5 h-1.5 rounded-full bg-[#E52421]/60 inline-block"></span></span>
                         <span class="text-lg md:text-2xl font-light tracking-[0.25em] uppercase text-monolith-black/80 px-8 md:px-14 flex items-center gap-8 md:gap-14">Greenply <span class="w-1.5 h-1.5 rounded-full bg-[#E52421]/60 inline-block"></span></span>
@@ -465,6 +495,33 @@
                     </div>
                 </div>
             </div>
+            <script>
+                (function() {
+                    const track = document.getElementById('brands-track');
+                    if (!track) return;
+                    let isHovered = false;
+                    track.parentElement.addEventListener('mouseenter', () => isHovered = true);
+                    track.parentElement.addEventListener('mouseleave', () => isHovered = false);
+
+                    // If CSS animation is not actively advancing, drive with requestAnimationFrame
+                    const anims = track.getAnimations();
+                    if (!anims || anims.length === 0) {
+                        let offset = 0;
+                        function loop() {
+                            if (!isHovered) {
+                                offset -= 0.8;
+                                const halfWidth = track.scrollWidth / 2;
+                                if (Math.abs(offset) >= halfWidth) {
+                                    offset = 0;
+                                }
+                                track.style.transform = `translate3d(${offset}px, 0, 0)`;
+                            }
+                            requestAnimationFrame(loop);
+                        }
+                        requestAnimationFrame(loop);
+                    }
+                })();
+            </script>
         </section>
 
         <!-- Narrative Section -->
