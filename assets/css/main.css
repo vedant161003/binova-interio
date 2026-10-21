@@ -112,49 +112,13 @@ html {
   -webkit-backdrop-filter: none;
 }
 
-/* ─── Brand Logo ─── */
-.brand-logo-img {
-  display: block;
-  height: 34px;
-  width: auto;
-  object-fit: contain;
-  transition: opacity 0.3s ease;
-}
-
-@media (min-width: 768px) {
-  .brand-logo-img {
-    height: 42px;
-  }
-}
-
-/* Header logo display switching based on transparency state */
-.header-transparent .logo-dark {
-  display: none !important;
-}
-.header-transparent .logo-light {
-  display: block !important;
-}
-
-#main-header:not(.header-transparent) .logo-dark {
-  display: block !important;
-}
-#main-header:not(.header-transparent) .logo-light {
-  display: none !important;
-}
-
-/* Footer logo sizing */
+/* ─── Footer Brand Logo ─── */
 .footer-logo-img {
   display: block;
-  height: 44px;
+  height: 48px;
+  max-height: 52px;
   width: auto;
-  object-fit: contain;
-}
-
-/* Drawer logo sizing */
-.drawer-logo-img {
-  display: block;
-  height: 36px;
-  width: auto;
+  max-width: 200px;
   object-fit: contain;
 }
 
