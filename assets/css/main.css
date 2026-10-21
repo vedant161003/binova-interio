@@ -408,7 +408,35 @@ button:focus:not(:focus-visible),
     page-break-inside: avoid;
   }
 
-  section {
-    page-break-inside: avoid;
+}
+
+/* ─── Continuous Running Brand Marquee ─── */
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  user-select: none;
+}
+
+.marquee-track {
+  display: flex;
+  flex-shrink: 0;
+  white-space: nowrap;
+  animation: marqueeSlide 35s linear infinite;
+  will-change: transform;
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
+
